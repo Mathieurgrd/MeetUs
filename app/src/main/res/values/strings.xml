@@ -4,4 +4,7 @@
     <string name="title_activity_login">Login</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="Signupwith">Sign in with </string>
+    <string name="EmailHint">Your Wild Email </string>
+    <string name="PasswordHint">Your Wild Password </string>
 </resources>

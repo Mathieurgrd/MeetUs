@@ -1,2 +1,0 @@
-# MeetUs
-The Big Project

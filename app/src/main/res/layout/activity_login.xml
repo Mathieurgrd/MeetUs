@@ -56,40 +56,96 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/facebookbutton"
-        android:id="@+id/imageButton4"
-        android:layout_above="@+id/imageButton3"
+        android:id="@+id/imageButton3"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/facebookbutton"
-        android:id="@+id/imageButton3"
-        android:layout_alignParentBottom="true"
+        app:srcCompat="@drawable/rectangle_twitter"
+        android:id="@+id/imageButton5"
+        android:layout_above="@+id/imageView3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="7dp" />
+
+    <TextView
+        android:text="@string/Signupwith"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_above="@+id/imageButton5"
+        android:layout_alignLeft="@+id/imageView6"
+        android:layout_alignStart="@+id/imageView6"
+        android:layout_marginLeft="34dp"
+        android:layout_marginStart="34dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:hint="@string/PasswordHint"
+        android:ems="10"
+        android:id="@+id/editText2"
+        android:layout_above="@+id/textView"
+        android:layout_alignLeft="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        android:layout_marginBottom="71dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textEmailAddress"
+        android:hint="@string/EmailHint"
+        android:ems="10"
+        android:id="@+id/editText"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="45dp"
         app:srcCompat="@drawable/fillfb"
-        android:id="@+id/imageView13"
+        android:id="@+id/imageView18"
+        android:layout_below="@+id/imageButton5"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="38dp"
+        android:layout_marginStart="38dp" />
+
+    <ImageView
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:srcCompat="@drawable/filltwitter1"
+        android:id="@+id/imageView14"
         android:layout_above="@+id/imageButton3"
-        android:layout_alignLeft="@+id/imageView2"
-        android:layout_alignStart="@+id/imageView2"
-        android:layout_marginBottom="7dp" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginLeft="27dp"
+        android:layout_marginStart="27dp" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/filltwitter1"
-        android:id="@+id/imageView14"
-        android:layout_marginLeft="45dp"
-        android:layout_marginStart="45dp"
-        android:layout_below="@+id/imageButton4"
-        android:layout_alignLeft="@+id/imageView6"
-        android:layout_alignStart="@+id/imageView6"
-        android:layout_marginTop="9dp" />
+        app:srcCompat="@drawable/twitter"
+        android:id="@+id/imageView19"
+        android:layout_alignTop="@+id/imageView14"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="13dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/facebook"
+        android:id="@+id/imageView20"
+        android:layout_marginTop="8dp"
+        android:layout_below="@+id/imageButton5"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView" />
 
 </RelativeLayout>
