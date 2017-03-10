@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "454657095522",
+    "firebase_url": "https://meetus-90719.firebaseio.com",
+    "project_id": "meetus-90719",
+    "storage_bucket": "meetus-90719.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:454657095522:android:e014fc8b86ac7d09",
+        "android_client_info": {
+          "package_name": "com.example.mathieu.meetus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "454657095522-itq76qijqs4om4r8ng80244pem8i2n65.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mathieu.meetus",
+            "certificate_hash": "1bf06a6ddc113850c562613fd822dc30737fb712"
+          }
+        },
+        {
+          "client_id": "454657095522-otb3n0eqkm87qluoa618q9dnro47hggj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC93WjmD-ftxDgEvtCFe0KwMBjMqJVH3yo"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "454657095522-otb3n0eqkm87qluoa618q9dnro47hggj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
