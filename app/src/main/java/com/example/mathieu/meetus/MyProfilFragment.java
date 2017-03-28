@@ -12,16 +12,16 @@ import android.view.ViewGroup;
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link ScreenSlidePageFragment.OnFragmentInteractionListener} interface
+ * {@link //ScreenSlidePageFragment.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link ScreenSlidePageFragment#newInstance} factory method to
+ * Use the {@link //ScreenSlidePageFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class ScreenSlidePageFragment extends Fragment {
+public class MyProfilFragment extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-    private static final String ARG_PARAM1 = "param1";
-    private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM1 = "Profil1";
+    private static final String ARG_PARAM2 = "Profil2";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -29,7 +29,7 @@ public class ScreenSlidePageFragment extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public ScreenSlidePageFragment() {
+    public MyProfilFragment() {
         // Required empty public constructor
     }
 
@@ -42,8 +42,8 @@ public class ScreenSlidePageFragment extends Fragment {
      * @return A new instance of fragment ScreenSlidePageFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static ScreenSlidePageFragment newInstance(String param1, String param2) {
-        ScreenSlidePageFragment fragment = new ScreenSlidePageFragment();
+    public static MyProfilFragment newInstance(String param1, String param2) {
+        MyProfilFragment fragment = new MyProfilFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);

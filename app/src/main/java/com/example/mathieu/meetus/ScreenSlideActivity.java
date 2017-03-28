@@ -2,11 +2,11 @@ package com.example.mathieu.meetus;
 
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.Fragment;
-import android.app.FragmentManager;
 import android.os.Bundle;
-import android.support.v13.app.FragmentPagerAdapter;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
 import android.view.Menu;
@@ -15,16 +15,18 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-public class ScreenSlideActivity extends Activity {
+public class ScreenSlideActivity extends FragmentActivity implements ViewPager.OnPageChangeListener {
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
-     * {@link FragmentPagerAdapter} derivative, which will keep every
+     * {@link //FragmentPagerAdapter} derivative, which will keep every
      * loaded fragment in memory. If this becomes too memory intensive, it
      * may be best to switch to a
      * {@link android.support.v13.app.FragmentStatePagerAdapter}.
      */
+
+
     private SectionsPagerAdapter mSectionsPagerAdapter;
 
     /**
@@ -32,13 +34,15 @@ public class ScreenSlideActivity extends Activity {
      */
     private ViewPager mViewPager;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_screen_slide);
         // Create the adapter that will return a fragment for each of the three
         // primary sections of the activity.
-        mSectionsPagerAdapter = new SectionsPagerAdapter(getFragmentManager());
+        mSectionsPagerAdapter = new SectionsPagerAdapter(getSupportFragmentManager());
 
         // Set up the ViewPager with the sections adapter.
         mViewPager = (ViewPager) findViewById(R.id.container);
@@ -46,6 +50,7 @@ public class ScreenSlideActivity extends Activity {
         mViewPager.setAdapter(mSectionsPagerAdapter);
 
     }
+
 
 
     @Override
@@ -62,12 +67,15 @@ public class ScreenSlideActivity extends Activity {
 
 
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_screen_slide, menu);
         return true;
     }
+
+
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
@@ -84,6 +92,22 @@ public class ScreenSlideActivity extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
+
+
     /**
      * A placeholder fragment containing a simple view.
      */
@@ -99,6 +123,10 @@ public class ScreenSlideActivity extends Activity {
 
         public PlaceholderFragment() {
         }
+
+
+
+
 
         /**
          * * Returns a new instance of this fragment for the given section
@@ -121,6 +149,9 @@ public class ScreenSlideActivity extends Activity {
             return fragment2;
         }
 
+
+
+
         @SuppressLint("StringFormatInvalid")
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -131,10 +162,16 @@ public class ScreenSlideActivity extends Activity {
             return rootView;
         }
 
+
+
+
     }
 
+
+
+
     /**
-     * A {@link FragmentPagerAdapter} that returns a fragment corresponding to
+     * A {@link //FragmentPagerAdapter} that returns a fragment corresponding to
      * one of the sections/tabs/pages.
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
@@ -147,15 +184,26 @@ public class ScreenSlideActivity extends Activity {
         public Fragment getItem(int position) {
             // getItem is called to instantiate the fragment for the given page.
             // Return a PlaceholderFragment (defined as a static inner class below).
-            return PlaceholderFragment.firstInstance(position + 1);
-            //A virer si ça buggue ( en attente de création du second fragment.) 
-            return PlaceholderFragment.secondInstance(position + 2);
+
+            switch(position) {
+
+                case 0: return MyProfilFragment.newInstance("Profil1", "Profil2");
+                case 1: return SecondFragment.newInstance("SecondFragment, Instance 1");
+                case 2: return ThirdFragment.newInstance("ThirdFragment, Instance 1");
+                case 3: return ThirdFragment.newInstance("ThirdFragment, Instance 2");
+                case 4: return ThirdFragment.newInstance("ThirdFragment, Instance 3");
+                default: return ThirdFragment.newInstance("ThirdFragment, Default");
+            }
+
+
+
+
         }
 
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 3;
+            return 4;
         }
 
         @Override
@@ -166,7 +214,11 @@ public class ScreenSlideActivity extends Activity {
                 case 1:
                     return "2";   //A virer si ça buggue
                 case 2:
-                    return "SECTION 3";
+                    return "3";
+                case 3 :
+                    return "4";
+                case 4 :
+                    return "5";
             }
             return null;
         }
