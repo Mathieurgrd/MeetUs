@@ -1,7 +1,12 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
@@ -9,5 +14,95 @@
         android:layout_height="match_parent"
         android:text="@string/hello_blank_fragment"
         android:id="@+id/Random"/>
+
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/text_d"
+        android:hint="Techno (Java, PHP, C/C++ ...)"
+        android:ems="10"
+        android:id="@+id/editTextTechno"
+        android:layout_below="@+id/editTextAge"
+        android:layout_alignLeft="@+id/editTextWild"
+        android:layout_alignStart="@+id/editTextWild"
+        android:gravity="center_vertical|center" />
+
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/text_d"
+        android:hint="Age"
+        android:ems="10"
+        android:id="@+id/editTextAge"
+        android:gravity="center_vertical|center"
+        android:layout_below="@+id/editTextName"
+        android:layout_alignLeft="@+id/editTextTechno"
+        android:layout_alignStart="@+id/editTextTechno" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/imgmarineprofil"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"
+        android:id="@+id/PhotoProfil"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:inputType="textPersonName"
+        android:hint="Ville"
+        android:background="@drawable/text_d"
+        android:ems="10"
+        android:id="@+id/editTextVille"
+        android:gravity="center_vertical|center"
+        android:layout_below="@+id/editTextWild"
+        android:layout_alignLeft="@+id/editTextWild"
+        android:layout_alignStart="@+id/editTextWild" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/text_d"
+        android:hint="Côté Wild"
+        android:ems="10"
+        android:id="@+id/editTextWild"
+        android:gravity="center_vertical|center"
+        android:layout_below="@+id/editTextTechno"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="70dp"
+        android:inputType="textPersonName"
+        android:background="@drawable/text_d"
+        android:hint="Name"
+        android:ems="10"
+        android:layout_marginTop="17dp"
+        android:id="@+id/editTextName"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_below="@+id/PhotoProfil"
+        android:layout_alignLeft="@+id/editTextAge"
+        android:layout_alignStart="@+id/editTextAge" />
+
+    <Button
+        android:hint="Edit my profil"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/start"
+        android:id="@+id/buttonProfil"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
 
 </FrameLayout>
