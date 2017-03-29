@@ -171,6 +171,12 @@
     <string name="title_activity_tabbed_">Tabbed_Activity</string>
     <string name="title_activity_view_pager">ViewPager</string>
     <string name="title_activity_screen_slide">ScreenSlideActivity</string>
-    <string name="section_label">Ca Marche !!!!</string>
+    <string name="section_label">Ca Marche !!!!</string>7
+    <string name="TutorialMeetUs">Welcome on MeetUs ! MeetUs is a brain new application that aim for developpers interaction and dialog, using funny games !
+    Blabla  BlablaBlabla BlablaBlablaBlabla BlablaBlablaBlablaBlablaBlabla  BlablaBlabla BlablaBlabla Blabla
+    BlablaBlablaBlablaBlablaBlablaBlablavvBlablaBlablaBlablaBlablaBlablaBlablaBlabla
+    BlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlabla</string>
+    <string name="title_activity_profil_welcome">ProfilWelcome</string>
+    <string name="toastCreateProfil">\"Les Toast c\'est bon\"</string>
 
 </resources>

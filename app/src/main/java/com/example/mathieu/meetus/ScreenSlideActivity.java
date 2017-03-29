@@ -187,12 +187,12 @@ public class ScreenSlideActivity extends FragmentActivity implements ViewPager.O
 
             switch(position) {
 
-                case 0: return MyProfilFragment.newInstance("Profil1", "Profil2");
-                case 1: return SecondFragment.newInstance("SecondFragment, Instance 1");
-                case 2: return ThirdFragment.newInstance("ThirdFragment, Instance 1");
-                case 3: return ThirdFragment.newInstance("ThirdFragment, Instance 2");
-                case 4: return ThirdFragment.newInstance("ThirdFragment, Instance 3");
-                default: return ThirdFragment.newInstance("ThirdFragment, Default");
+                case 0: return MyProfilFragment.newInstance("Profil1 Profil2");
+                case 1: return GuessGame.newInstance("GuessGame");
+                case 2: return TutorielFragment.newInstance("Tuto Fragment");
+               // case 3: return ThirdFragment.newInstance("ThirdFragment, Instance 2");
+                //case 4: return ThirdFragment.newInstance("ThirdFragment, Instance 3");
+                default: return MyProfilFragment.newInstance("ThirdFragment, Default");
             }
 
 
@@ -203,7 +203,7 @@ public class ScreenSlideActivity extends FragmentActivity implements ViewPager.O
         @Override
         public int getCount() {
             // Show 3 total pages.
-            return 4;
+            return 3;
         }
 
         @Override
