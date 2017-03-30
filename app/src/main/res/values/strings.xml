@@ -42,6 +42,7 @@
     <string name="label_emailpassword">Email/Password Authentication</string>
 
     <string name="desc_emailpassword">Use an email and password to authenticate with Firebase.</string>
+    <string name="google_maps_key">AIzaSyAcFTWwL8GZI1FClwJuGcrQMxSFZpNdyiI</string>
 
 
     <string name="label_anonymous_auth">Anonymous Authentication</string>
