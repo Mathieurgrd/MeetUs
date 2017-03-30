@@ -139,15 +139,6 @@ public class ScreenSlideActivity extends FragmentActivity implements ViewPager.O
             fragment.setArguments(args);
             return fragment;
         }
-        //A virer si ça buggue
-        public static PlaceholderFragment secondInstance(int sectionNumber) {
-            PlaceholderFragment fragment2 = new PlaceholderFragment();
-            Bundle args2 = new Bundle();
-            args2.putInt(ARG_SECTION_NUMBER2, sectionNumber);
-            fragment2.setArguments(args2);
-
-            return fragment2;
-        }
 
 
 

@@ -41,7 +41,7 @@ public class CreateProfilActivity extends AppCompatActivity {
         editTextTechno = (EditText) findViewById(R.id.editTextTechno);
         editTextWild = (EditText) findViewById(R.id.editTextWild);
         editTextVille = (EditText) findViewById(R.id.editTextVille);
-        toast = Toast.makeText(context, getString(R.string.toastCreateProfil), Toastduration);
+        toast = Toast.makeText(this, getString(R.string.toastCreateProfil), Toastduration);
         context = getApplicationContext();
         Toastduration = Toast.LENGTH_SHORT;
         imageViewProfil = (ImageView) findViewById(R.id.PhotoProfil);

@@ -178,5 +178,12 @@
     BlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlabla</string>
     <string name="title_activity_profil_welcome">ProfilWelcome</string>
     <string name="toastCreateProfil">\"Les Toast c\'est bon\"</string>
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="verify_your_password">Verify your Password</string>
+    <string name="minimum_password">Password trop court, 6 caractéres minimum !</string>
+    <string name="lbl_forgot_password">Forgot password string</string>
+    <string name="forgot_password_msg">Forgot password msg</string>
+    <string name="btn_reset_password">Reset Password</string>
+    <string name="btn_back">ButtonBack</string>
 
 </resources>
