@@ -30,14 +30,16 @@ public class LoginActivity extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
 
         if (auth.getCurrentUser() != null) {
-            startActivity(new Intent(LoginActivity.this, ScreenSlideActivity.class));
+            startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
             finish();
         }
+        else startActivity(new Intent(LoginActivity.this, ScreenSlideActivity.class));
+        finish();
 
         // set the view now
         setContentView(R.layout.activity_login);
 
-        inputEmail = (EditText) findViewById(R.id.email);
+        inputEmail = (EditText) findViewById(R.id.emailText);
         inputPassword = (EditText) findViewById(R.id.passwordText);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         btnSignup = (Button) findViewById(R.id.buttonSignUp);

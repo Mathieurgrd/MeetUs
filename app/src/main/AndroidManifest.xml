@@ -47,7 +47,8 @@
         <activity
             android:name=".SignUpActivity"
             android:label="@string/title_activity_sign_up" />
-        <activity android:name=".ResetPasswordActivity"></activity>
+        <activity android:name=".ResetPasswordActivity" />
+        <activity android:name=".ScoreResultsActivity"></activity>
     </application>
 
 </manifest>

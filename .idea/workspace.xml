@@ -5,12 +5,19 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="367a5bad-d006-4a4e-a58d-69e4a52d4238" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ResetPasswordActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/SignUpActivity.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/drawable/trybutton.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/renderscript_v8.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/BlurBuilder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ScoreResultsActivity.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/layout/score_activity.xml" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/bottom_bar_2_1_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/constraint_layout_1_0_2.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/constraint_layout_solver_1_0_2.xml" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
@@ -20,14 +27,14 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-25.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/CreateProfilActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/CreateProfilActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/GuessGame.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/GuessGame.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/LoginActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ScreenSlideActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ScreenSlideActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/SignUpActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/SignUpActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_guess_game.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_guess_game.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="MeetUs.iws" />
@@ -61,274 +68,50 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="LoginActivity.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/LoginActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="42" />
+            <state relative-caret-position="506">
+              <caret line="51" column="7" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#1828#2029#0" expanded="true" />
+                <element signature="e#2028#2029#0" expanded="true" />
+                <element signature="e#2069#2277#0" expanded="true" />
+                <element signature="e#2276#2277#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="activity_reset_password.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml">
-          <provider selected="true" editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="25" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="25" />
-              <folding>
-                <element signature="e#725#760#0" expanded="true" />
-                <element signature="e#996#1025#0" expanded="true" />
-                <element signature="e#1357#1392#0" expanded="true" />
-                <element signature="e#1418#1447#0" expanded="true" />
-                <element signature="e#1990#2010#0" expanded="true" />
-                <element signature="e#2557#2585#0" expanded="true" />
-                <element signature="e#2903#2921#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PageLogo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/PageLogo.java">
+      <file leaf-file-name="ScoreResultsActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ScoreResultsActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-              <folding>
-                <element signature="e#422#703#0" expanded="true" />
-                <element signature="e#702#703#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ResetPasswordActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ResetPasswordActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="972">
-              <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1192#1334#0" expanded="true" />
-                <element signature="e#1333#1334#0" expanded="true" />
-                <element signature="e#1374#2643#0" expanded="true" />
-                <element signature="e#1905#2617#0" expanded="true" />
-                <element signature="e#2616#2617#0" expanded="true" />
-                <element signature="e#2642#2643#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SignUpActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/SignUpActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="284">
-              <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1962#4310#0" expanded="true" />
-                <element signature="e#3072#4283#0" expanded="true" />
-                <element signature="e#4282#4283#0" expanded="true" />
-                <element signature="e#4309#4310#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_sign_up.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml">
-          <provider editor-type-id="android-designer2">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
-              <folding>
-                <element signature="e#365#398#0" expanded="true" />
-                <element signature="e#423#458#0" expanded="true" />
-                <element signature="e#484#519#0" expanded="true" />
-                <element signature="e#543#576#0" expanded="true" />
-                <element signature="e#1725#1745#0" expanded="true" />
-                <element signature="e#3136#3158#0" expanded="true" />
-                <element signature="e#3538#3554#0" expanded="true" />
-                <element signature="e#6020#6042#0" expanded="true" />
-                <element signature="e#6413#6443#0" expanded="true" />
-                <element signature="e#6829#6848#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Activity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Téléchargements/sources/android-25/android/app/Activity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95505">
-              <caret line="6608" column="0" selection-start-line="6608" selection-start-column="0" selection-end-line="6608" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#303047#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#39967#39968#0" expanded="false" />
-                <element signature="e#39997#39998#0" expanded="false" />
-                <element signature="e#40384#40385#0" expanded="false" />
-                <element signature="e#40419#40420#0" expanded="false" />
-                <element signature="e#40527#40528#0" expanded="false" />
-                <element signature="e#40562#40563#0" expanded="false" />
-                <element signature="e#40665#40666#0" expanded="false" />
-                <element signature="e#40703#40704#0" expanded="false" />
-                <element signature="e#40817#40818#0" expanded="false" />
-                <element signature="e#40847#40848#0" expanded="false" />
-                <element signature="e#40961#40962#0" expanded="false" />
-                <element signature="e#40998#40999#0" expanded="false" />
-                <element signature="e#41346#41347#0" expanded="false" />
-                <element signature="e#41376#41377#0" expanded="false" />
-                <element signature="e#41513#41514#0" expanded="false" />
-                <element signature="e#41565#41566#0" expanded="false" />
-                <element signature="e#41907#41908#0" expanded="false" />
-                <element signature="e#41980#41981#0" expanded="false" />
-                <element signature="e#50815#50816#0" expanded="false" />
-                <element signature="e#50867#50868#0" expanded="false" />
-                <element signature="e#54264#54265#0" expanded="false" />
-                <element signature="e#54294#54295#0" expanded="false" />
-                <element signature="e#57430#57431#0" expanded="false" />
-                <element signature="e#57477#57478#0" expanded="false" />
-                <element signature="e#58335#58336#0" expanded="false" />
-                <element signature="e#58374#58375#0" expanded="false" />
-                <element signature="e#72173#72174#0" expanded="false" />
-                <element signature="e#72201#72202#0" expanded="false" />
-                <element signature="e#72981#72982#0" expanded="false" />
-                <element signature="e#73008#73009#0" expanded="false" />
-                <element signature="e#86834#86835#0" expanded="false" />
-                <element signature="e#86875#86876#0" expanded="false" />
-                <element signature="e#91190#91191#0" expanded="false" />
-                <element signature="e#91217#91218#0" expanded="false" />
-                <element signature="e#92915#92916#0" expanded="false" />
-                <element signature="e#92942#92943#0" expanded="false" />
-                <element signature="e#94780#94781#0" expanded="false" />
-                <element signature="e#94834#94835#0" expanded="false" />
-                <element signature="e#101879#101880#0" expanded="false" />
-                <element signature="e#101930#101931#0" expanded="false" />
-                <element signature="e#108780#108781#0" expanded="false" />
-                <element signature="e#108832#108833#0" expanded="false" />
-                <element signature="e#109002#109003#0" expanded="false" />
-                <element signature="e#109056#109057#0" expanded="false" />
-                <element signature="e#116877#116878#0" expanded="false" />
-                <element signature="e#116905#116906#0" expanded="false" />
-                <element signature="e#118280#118281#0" expanded="false" />
-                <element signature="e#118308#118309#0" expanded="false" />
-                <element signature="e#121004#121005#0" expanded="false" />
-                <element signature="e#121032#121033#0" expanded="false" />
-                <element signature="e#122262#122263#0" expanded="false" />
-                <element signature="e#122290#122291#0" expanded="false" />
-                <element signature="e#133138#133139#0" expanded="false" />
-                <element signature="e#133165#133166#0" expanded="false" />
-                <element signature="e#145100#145101#0" expanded="false" />
-                <element signature="e#145137#145138#0" expanded="false" />
-                <element signature="e#149374#149375#0" expanded="false" />
-                <element signature="e#149431#149432#0" expanded="false" />
-                <element signature="e#149767#149768#0" expanded="false" />
-                <element signature="e#149824#149825#0" expanded="false" />
-                <element signature="e#150126#150127#0" expanded="false" />
-                <element signature="e#150164#150165#0" expanded="false" />
-                <element signature="e#152037#152038#0" expanded="false" />
-                <element signature="e#152064#152065#0" expanded="false" />
-                <element signature="e#153766#153767#0" expanded="false" />
-                <element signature="e#153807#153808#0" expanded="false" />
-                <element signature="e#154001#154002#0" expanded="false" />
-                <element signature="e#154046#154047#0" expanded="false" />
-                <element signature="e#155756#155757#0" expanded="false" />
-                <element signature="e#155792#155793#0" expanded="false" />
-                <element signature="e#162855#162856#0" expanded="false" />
-                <element signature="e#162890#162891#0" expanded="false" />
-                <element signature="e#166213#166214#0" expanded="false" />
-                <element signature="e#166259#166260#0" expanded="false" />
-                <element signature="e#168014#168015#0" expanded="false" />
-                <element signature="e#168068#168069#0" expanded="false" />
-                <element signature="e#191654#191655#0" expanded="false" />
-                <element signature="e#191702#191703#0" expanded="false" />
-                <element signature="e#193494#193495#0" expanded="false" />
-                <element signature="e#193540#193541#0" expanded="false" />
-                <element signature="e#209057#209058#0" expanded="false" />
-                <element signature="e#209084#209085#0" expanded="false" />
-                <element signature="e#216147#216148#0" expanded="false" />
-                <element signature="e#216174#216175#0" expanded="false" />
-                <element signature="e#219865#219866#0" expanded="false" />
-                <element signature="e#219897#219898#0" expanded="false" />
-                <element signature="e#220076#220077#0" expanded="false" />
-                <element signature="e#220109#220110#0" expanded="false" />
-                <element signature="e#220673#220674#0" expanded="false" />
-                <element signature="e#220719#220720#0" expanded="false" />
-                <element signature="e#222668#222669#0" expanded="false" />
-                <element signature="e#222722#222723#0" expanded="false" />
-                <element signature="e#224442#224443#0" expanded="false" />
-                <element signature="e#224466#224467#0" expanded="false" />
-                <element signature="e#226654#226655#0" expanded="false" />
-                <element signature="e#226708#226709#0" expanded="false" />
-                <element signature="e#236642#236643#0" expanded="false" />
-                <element signature="e#236675#236676#0" expanded="false" />
-                <element signature="e#238804#238805#0" expanded="false" />
-                <element signature="e#238846#238847#0" expanded="false" />
-                <element signature="e#239438#239439#0" expanded="false" />
-                <element signature="e#239467#239468#0" expanded="false" />
-                <element signature="e#239507#239508#0" expanded="false" />
-                <element signature="e#239541#239542#0" expanded="false" />
-                <element signature="e#246367#246368#0" expanded="false" />
-                <element signature="e#246426#246427#0" expanded="false" />
-                <element signature="e#247835#247836#0" expanded="false" />
-                <element signature="e#247890#247891#0" expanded="false" />
-                <element signature="e#249033#249034#0" expanded="false" />
-                <element signature="e#249060#249061#0" expanded="false" />
-                <element signature="e#261010#261011#0" expanded="false" />
-                <element signature="e#261040#261041#0" expanded="false" />
-                <element signature="e#278676#278677#0" expanded="false" />
-                <element signature="e#278742#278743#0" expanded="false" />
-                <element signature="e#279992#279993#0" expanded="false" />
-                <element signature="e#280024#280025#0" expanded="false" />
-                <element signature="e#291449#291450#0" expanded="false" />
-                <element signature="e#291480#291481#0" expanded="false" />
-                <element signature="e#299702#299703#0" expanded="false" />
-                <element signature="e#299759#299760#0" expanded="false" />
-                <element signature="e#300033#300034#0" expanded="false" />
-                <element signature="e#300078#300079#0" expanded="false" />
-                <element signature="e#300731#300732#0" expanded="false" />
-                <element signature="e#300775#300776#0" expanded="false" />
-                <element signature="e#300842#300843#0" expanded="false" />
-                <element signature="e#300903#300904#0" expanded="false" />
-                <element signature="e#302345#302346#0" expanded="false" />
-                <element signature="e#302395#302396#0" expanded="false" />
-                <element signature="e#302807#302808#0" expanded="false" />
-                <element signature="e#302868#302869#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MessageQueue.java" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/Téléchargements/sources/android-25/android/os/MessageQueue.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#31295#0" expanded="false" />
-                <element signature="imports" expanded="false" />
-                <element signature="e#17302#17303#0" expanded="false" />
-                <element signature="e#17368#17369#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CreateProfilActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/CreateProfilActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+            <state relative-caret-position="330">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="build.gradle" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BlurBuilder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/BlurBuilder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+              <folding>
+                <marker date="1490908520218" expanded="true" signature="44:153" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -338,6 +121,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="layoutResourceFile_vertical" />
         <option value="ASClass" />
       </list>
     </option>
@@ -874,11 +658,6 @@
                 <option name="name" value="prepareDeHdodenhofCircleimageview210Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support.constraint:constraint-layout:1.0.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComAndroidSupportConstraintConstraintLayout102Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.google.android.gms:play-services-ads:10.2.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAds1021Library" />
@@ -1197,11 +976,6 @@
                 <option name="description" value="Installs and runs instrumentation tests for all flavors on connected devices." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="connectedAndroidTest" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
-                <option name="description" value="Prepare com.roughike:bottom-bar:2.1.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
-                <option name="name" value="prepareComRoughikeBottomBar212Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1866,11 +1640,6 @@
                 <option name="name" value="prepareDeHdodenhofCircleimageview210Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.android.support.constraint:constraint-layout:1.0.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComAndroidSupportConstraintConstraintLayout102Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="description" value="Prepare com.google.android.gms:play-services-ads:10.2.1" />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="prepareComGoogleAndroidGmsPlayServicesAds1021Library" />
@@ -2181,11 +1950,6 @@
                 <option name="name" value="connectedAndroidTest" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
-                <option name="description" value="Prepare com.roughike:bottom-bar:2.1.2" />
-                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
-                <option name="name" value="prepareComRoughikeBottomBar212Library" />
-              </ExternalTaskPojo>
-              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="transformClassesWithDexForRelease" />
               </ExternalTaskPojo>
@@ -2351,7 +2115,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="$PROJECT_DIR$" value="4472484587082" />
+        <entry key="$PROJECT_DIR$" value="4472509453416" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2621,7 +2385,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/attrs.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/CircleImageVIew.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_screen_slide_page.xml" />
@@ -2629,10 +2392,16 @@
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/CreateProfilActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_sign_up.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/SignUpActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ResetPasswordActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/SignUpActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/LoginActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/score_activity.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ScoreResultsActivity.java" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/GuessGame.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/fragment_guess_game.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/BlurBuilder.java" />
       </list>
     </option>
   </component>
@@ -3190,13 +2959,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="24" width="1301" height="744" extended-state="6" />
+    <frame x="65" y="24" width="1301" height="744" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.50278884" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20873787" sideWeight="0.49721116" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -3209,7 +2978,7 @@
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32847896" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32847896" sideWeight="0.49721116" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -3252,6 +3021,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1828#2029#0" expanded="true" />
+            <element signature="e#2028#2029#0" expanded="true" />
+            <element signature="e#2069#2277#0" expanded="true" />
+            <element signature="e#2276#2277#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3414,7 +3187,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="e#1324#1361#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3424,6 +3199,10 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1828#2029#0" expanded="true" />
+            <element signature="e#2028#2029#0" expanded="true" />
+            <element signature="e#2069#2277#0" expanded="true" />
+            <element signature="e#2276#2277#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -3586,7 +3365,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-          <folding />
+          <folding>
+            <element signature="e#1324#1361#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3641,28 +3422,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="26" column="48" selection-start-line="26" selection-start-column="48" selection-end-line="26" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/attrs.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_screen_slide_page.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
           <folding />
         </state>
       </provider>
@@ -3681,9 +3444,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="501">
+          <caret line="205" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
+        <state relative-caret-position="255">
           <caret line="17" column="43" selection-start-line="17" selection-start-column="43" selection-end-line="17" selection-end-column="43" />
           <folding />
         </state>
@@ -3692,30 +3466,55 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/CreateProfilActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
-          <folding />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="25" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="25" />
+          <folding>
+            <element signature="e#725#760#0" expanded="true" />
+            <element signature="e#996#1025#0" expanded="true" />
+            <element signature="e#1357#1392#0" expanded="true" />
+            <element signature="e#1418#1447#0" expanded="true" />
+            <element signature="e#1990#2010#0" expanded="true" />
+            <element signature="e#2557#2585#0" expanded="true" />
+            <element signature="e#2903#2921#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Téléchargements/sources/android-25/android/os/MessageQueue.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/PageLogo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+        <state relative-caret-position="195">
+          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
           <folding>
-            <element signature="e#0#31295#0" expanded="false" />
+            <element signature="e#422#703#0" expanded="false" />
+            <element signature="e#702#703#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ResetPasswordActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="972">
+          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
+          <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#17302#17303#0" expanded="false" />
-            <element signature="e#17368#17369#0" expanded="false" />
+            <element signature="e#1192#1334#0" expanded="false" />
+            <element signature="e#1333#1334#0" expanded="false" />
+            <element signature="e#1374#2643#0" expanded="false" />
+            <element signature="e#1905#2617#0" expanded="false" />
+            <element signature="e#2616#2617#0" expanded="false" />
+            <element signature="e#2642#2643#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$USER_HOME$/Téléchargements/sources/android-25/android/app/Activity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95505">
+        <state relative-caret-position="353">
           <caret line="6608" column="0" selection-start-line="6608" selection-start-column="0" selection-end-line="6608" selection-end-column="0" />
           <folding>
             <element signature="e#0#303047#0" expanded="false" />
@@ -3854,14 +3653,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_login.xml">
-      <provider editor-type-id="android-designer2">
-        <state />
-      </provider>
+    <entry file="file://$USER_HOME$/Téléchargements/sources/android-25/android/os/MessageQueue.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="501">
-          <caret line="205" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="205" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="353">
+          <caret line="62" column="24" selection-start-line="62" selection-start-column="24" selection-end-line="62" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#31295#0" expanded="false" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#17302#17303#0" expanded="false" />
+            <element signature="e#17368#17369#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/CreateProfilActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="43" column="35" selection-start-line="43" selection-start-column="35" selection-end-line="43" selection-end-column="35" />
+          <folding>
+            <element signature="e#1324#1361#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -3870,89 +3681,155 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
+        <state relative-caret-position="649">
           <caret line="203" column="32" selection-start-line="203" selection-start-column="32" selection-end-line="203" selection-end-column="32" />
-          <folding>
-            <element signature="e#365#398#0" expanded="true" />
-            <element signature="e#423#458#0" expanded="true" />
-            <element signature="e#484#519#0" expanded="true" />
-            <element signature="e#543#576#0" expanded="true" />
-            <element signature="e#1725#1745#0" expanded="true" />
-            <element signature="e#3136#3158#0" expanded="true" />
-            <element signature="e#3538#3554#0" expanded="true" />
-            <element signature="e#6020#6042#0" expanded="true" />
-            <element signature="e#6413#6443#0" expanded="true" />
-            <element signature="e#6829#6848#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/SignUpActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="41" column="15" selection-start-line="41" selection-start-column="15" selection-end-line="41" selection-end-column="15" />
+        <state relative-caret-position="181">
+          <caret line="35" column="59" selection-start-line="35" selection-start-column="59" selection-end-line="35" selection-end-column="59" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1962#4310#0" expanded="true" />
-            <element signature="e#3072#4283#0" expanded="true" />
-            <element signature="e#4282#4283#0" expanded="true" />
-            <element signature="e#4309#4310#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ResetPasswordActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="972">
-          <caret line="72" column="1" selection-start-line="72" selection-start-column="1" selection-end-line="72" selection-end-column="1" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1192#1334#0" expanded="true" />
-            <element signature="e#1333#1334#0" expanded="true" />
-            <element signature="e#1374#2643#0" expanded="true" />
-            <element signature="e#1905#2617#0" expanded="true" />
-            <element signature="e#2616#2617#0" expanded="true" />
-            <element signature="e#2642#2643#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_reset_password.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_score_results.xml">
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
       <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/score_activity.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="105">
-          <caret line="7" column="25" selection-start-line="7" selection-start-column="24" selection-end-line="7" selection-end-column="25" />
+          <caret line="7" column="66" selection-start-line="7" selection-start-column="66" selection-end-line="7" selection-end-column="66" />
           <folding>
-            <element signature="e#725#760#0" expanded="true" />
-            <element signature="e#996#1025#0" expanded="true" />
-            <element signature="e#1357#1392#0" expanded="true" />
-            <element signature="e#1418#1447#0" expanded="true" />
-            <element signature="e#1990#2010#0" expanded="true" />
-            <element signature="e#2557#2585#0" expanded="true" />
-            <element signature="e#2903#2921#0" expanded="true" />
+            <element signature="e#156#189#0" expanded="true" />
+            <element signature="e#214#249#0" expanded="true" />
+            <element signature="e#275#310#0" expanded="true" />
+            <element signature="e#334#367#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/PageLogo.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_screen_slide_page.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="52" column="44" selection-start-line="52" selection-start-column="44" selection-end-line="52" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_screen_slide.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Téléchargements/sources/android-25/android/view/View.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
-          <caret line="16" column="34" selection-start-line="16" selection-start-column="34" selection-end-line="16" selection-end-column="34" />
-          <folding>
-            <element signature="e#422#703#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-          </folding>
+          <caret line="22618" column="13" selection-start-line="22618" selection-start-column="13" selection-end-line="22618" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/LoginActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="47" column="8" selection-start-line="47" selection-start-column="8" selection-end-line="47" selection-end-column="42" />
+        <state relative-caret-position="506">
+          <caret line="51" column="7" selection-start-line="51" selection-start-column="6" selection-end-line="51" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1828#2029#0" expanded="true" />
+            <element signature="e#2028#2029#0" expanded="true" />
+            <element signature="e#2069#2277#0" expanded="true" />
+            <element signature="e#2276#2277#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/MyProfilFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/ScoreResultsActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/trybutton.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/GuessGame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="43" column="72" selection-start-line="43" selection-start-column="72" selection-end-line="43" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/fragment_guess_game.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-1960">
+          <caret line="24" column="48" selection-start-line="24" selection-start-column="48" selection-end-line="24" selection-end-column="48" />
+          <folding>
+            <element signature="e#1595#1615#0" expanded="true" />
+            <element signature="e#2067#2090#0" expanded="true" />
+            <element signature="e#4119#4147#0" expanded="true" />
+            <element signature="e#5985#6004#0" expanded="true" />
+            <element signature="e#6674#6689#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="43" selection-start-line="10" selection-start-column="43" selection-end-line="10" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/example/mathieu/meetus/BlurBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="16" column="8" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="8" />
+          <folding>
+            <marker date="1490908520218" expanded="true" signature="44:153" ph="..." />
           </folding>
         </state>
       </provider>

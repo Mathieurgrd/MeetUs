@@ -185,5 +185,11 @@
     <string name="forgot_password_msg">Forgot password msg</string>
     <string name="btn_reset_password">Reset Password</string>
     <string name="btn_back">ButtonBack</string>
+    <string name="guess">GUESS</string>
+    <string name="trybutton">TRY</string>
+    <string name="textviewspecialite">Spécialité</string>
+    <string name="textviewville">Ville</string>
+    <string name="guesstvage">Age</string>
+    <string name="guesstvwild_side">Wild Side</string>
 
 </resources>
