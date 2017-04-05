@@ -15,6 +15,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class ScreenSlideActivity extends FragmentActivity implements ViewPager.OnPageChangeListener {
 
     /**
@@ -24,7 +26,12 @@ public class ScreenSlideActivity extends FragmentActivity implements ViewPager.O
      * loaded fragment in memory. If this becomes too memory intensive, it
      * may be best to switch to a
      * {@link android.support.v13.app.FragmentStatePagerAdapter}.
+     *
+     *
      */
+
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
 
     private SectionsPagerAdapter mSectionsPagerAdapter;
@@ -147,12 +154,11 @@ public class ScreenSlideActivity extends FragmentActivity implements ViewPager.O
         @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container,
                                  Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.fragment_screen_slide, container, false);
-            TextView textView = (TextView) rootView.findViewById(R.id.section_label);
+            View rootView = inflater.inflate(R.layout.fragment_guess_game, container, false);
+            TextView textView = (TextView) rootView.findViewById(R.id.PhotoProfil);
             textView.setText(getString(R.string.section_label, getArguments().getInt(ARG_SECTION_NUMBER1)));
             return rootView;
         }
-
 
 
 

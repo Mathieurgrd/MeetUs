@@ -3,318 +3,39 @@
 
     <item
         is-multidex="true"
-        jar="/home/mathieu/Téléchargements/extras/android/m2repository/com/android/support/support-annotations/25.3.0/support-annotations-25.3.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="dd84903d2e1af25a6081ef9038ad863cb14ca3a0">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.0_6697aeb57562265ae058cad3389c2bf372b17ca2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-nearby/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cce5792fa30ee8520620f298bf920309423b180f">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-nearby-10.2.1_a13058f027729178fe9f1a61554f4dcdc06375bf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wallet/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d395c5142f474891c7750f13b6a85d14682f166b">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wallet-10.2.1_a165c4aadb65f5ecf0dd621082d7d434654f0443/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-games/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="8dfe54fbaf4f2a27d395ddf806d0c011170999e0">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-games-10.2.1_61510c3a322e55ccc596db7b92ad4a8b8c42cdb2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-places/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e4851331b3944beb6e7f77316a7661f53781da62">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-places-10.2.1_19eef6f7e30779fd70dd9546e1608516bc896596/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-appcompat-v7-25.3.0_ad4d1427701550cb52e73d0b51c1c8ba631d3b02/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="da5c606c36276a12a356e351882044c6b4b9e8d4">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-10.2.1_4a76ed09a2c90148bd61e8ea4be6d1ebef98e3bf/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/transition/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="fbb206f7a119f66ce171d95aae1225a5b209a8b7">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-transition-25.3.0_0714986be3854dc51c1e8a908e1aabea23cb1a3e/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-wearable/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6c74dab42788b458960618238f338d324b6f0656">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-wearable-10.2.1_de74b70775b4c001b57bfa39db19375c732404d1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support.constraint/constraint-layout/1.0.2/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support.constraint-constraint-layout-1.0.2_d0d1124b2e85e65c85ed219d3eaea4eb25fce7e2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/7e4f90bbb09be4173846e4737a1ae5fc1257c79a/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="b327fbe2fad414bc38cf0ce8f7efe1a38f572837">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-mediarouter-v7-24.0.0_f67f4a9e3c5b722db6c7dd45906cceafb1567dc3/classes.dex" />
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9316deeabb69a5b438d9f57f0f471e6e59760f72/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-ads-lite/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ab8343c3aadefce37313ceadd8bc4db1993f2ff0">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-ads-lite-10.2.1_f3489f94fdf14ba5db2f9b4e0ceccdaa31118b86/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics-impl/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="888983f51cf34f57a93ff16832552f2f15937212">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-impl-10.2.1_d8d8ab563debd5b97938097bb02ffa3b95dec377/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d0a843615f3b5fa3a080497709f5436696149a09">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-10.2.1_db37e826be9014fbfea21773f5568264f1503a42/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-iid/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="399f75732ff1ac159f9e73611536f1508bf18d3b">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-iid-10.2.1_1cd33cdb472f4c822750a4ebbc5184313c180611/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-safetynet/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d81a3b0a16f48b4456f442552b62f4b1a472ce24">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-safetynet-10.2.1_e1233d6ebb18d4ac508c466e38fe2ee5006f117b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/palette-v7/24.0.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-palette-v7-24.0.0_c6073cc365c4618f16775e6932110db085d6d138/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-auth/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4b42a61cd5924f28e95894e859e6abe57847e2f3">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-auth-10.2.1_6feef4453238c9cdbeebdaa5db8d55e2a5c50bc9/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="dbae35d7fc3427d30bef0037bdf61ad0d8d984f8">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-10.2.1_da21156034cb4b87e4b470863ce26b4e1b2393f5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/animated-vector-drawable/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4b746ef0fd46acb5aaf3d9ab9a4cec22c28d3211">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-animated-vector-drawable-25.3.0_de7df5a48de6b3554e44dddae7be6c86c13485f2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-vision/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/edf39211ed56a0da0fd670675eb28a2e863fdd4e/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="4e684205744f814a73b7752545e0661330415c9e">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-vision-10.2.1_fb31626822a154ea03330279ec945bbc94e18849/classes.dex" />
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bf8262a102f03ab92bee2fde4ab98346c4912071/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast-framework/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/9a5f60b3d2d0299d68ed5acedf647e6d86a272ac/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="b136ac09f209c1d91fec7db8518e33d4373c8f39">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-framework-10.2.1_3290ce450ca6ff0ddb24c63d44c9dacaef286b5b/classes.dex" />
+        sha1="ab8343c3aadefce37313ceadd8bc4db1993f2ff0">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_306f52f554e70e6e8813d505b10a28dfb5385e22/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-config/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/f2416398509bf0860c6b6854279d3ed45352a9c5/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="bb004ea36f8802bad30000e286c177691740a322">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-config-10.2.1_688abe6fdd4c16890cf683a91c266c06c44a013c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-iid/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="abf7c64e0bbaaa931738856734f76646ae62d9a5">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-iid-10.2.1_fef252a47d5e47dec50c4b29117bff9d8e13efc7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/support-media-compat/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="425c7b17887e5c3f8cbdf67ba171bc246f29b42c">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-media-compat-25.3.0_66b421e96187aa57d6af916954c589d285aa6b69/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/design/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="9ab787a20aae245b5b3651ae0b9c38459eb37715">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-design-25.3.0_57ce101b00b0431106f5e83ef3dba1edb4aafb31/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-v4-impl/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="efae381df589f3d4977c346c8a980f030315bb8b">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-v4-impl-10.2.1_228b73e9b2a903043ff54795b1a400b03789d214/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/support-core-utils/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="518768f3200963fbfec652f498da2c9d39245234">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-utils-25.3.0_7b088042c760c00e80773d345d1428559e833db6/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gcm/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="cfa47e1b140562d47bc670629d07e209cd8b02c4">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gcm-10.2.1_088fb26c0ca2be3dacad5f2878cb891161f4a30d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-cast/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="825c2e97a00df4df5b0f3081faa4fd6280cd7c72">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-cast-10.2.1_88c7e0941c8ad4db5e1b08eec165b2a2702d0938/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth-base/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="12032271e6be735e811ad529cb08ff066c381640">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-base-10.2.1_dd357902b3d8f5d06b9bf7b716a9a01515e18a69/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-awareness/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c7ba26433d9e9f4429d83ff65ad79bfc801dc00a">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-awareness-10.2.1_7aca74b2705ea0a06f3170957f005bbfd1db1d09/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-identity/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="ec7d3099b4e3cf23230c78acaae438f3371e1c19">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-identity-10.2.1_9325086e5c76dca9b391969d4fe3fdd331441782/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/mediarouter-v7/24.0.0/jars/libs/internal_impl-24.0.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_aafc2eabb2058d858d05e07cf809a0290bc40d4d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0bb2f0934fa55799508ba58ffc9ba579b35744b8">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-10.2.1_b9ba31ad39b4374e801ddc45d83c960cdac1678b/classes.dex" />
+        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_0095f6e81deeb89df10c24142fa74ad9359450c5/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -322,53 +43,80 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="03b68d05fdf54459c7fe6463c4f7c0e2a56cc276">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_d47edf1a3f1fbd3e3e6bbf00ff796480bdc43244/classes.dex" />
+        sha1="df5e83fcf3f94a9d048b17542eecbdb8b2bbc070">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d47edf1a3f1fbd3e3e6bbf00ff796480bdc43244/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-instantapps/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/8e79a6edbb2389e5840ce873931dfdd04167b104/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="09adf6e61abc0fe3b2cb5b1795a7033572475fad">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d109a2900c4502e9a1a6cb54d06a3611208168ec/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/bd1c57333c504682e35afd88e4be2991dd51425b/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="5ee29abfc804ebd51d65a4bde424c0ee74363939">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-instantapps-10.2.1_cb99da739225bf5ac627dfcb3350fd59d042d5ed/classes.dex" />
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7a6da7b8ea1560cdcb2cf5581a05dd71184f281f/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-drive/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/f0140ef9e412629aac740ad4c740fc42232ad742/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="b6818f5804ca0b5eb089d902458faea4179eca1d">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-drive-10.2.1_4482db1e8446294f27ccbbd712e435bdc38b5d7f/classes.dex" />
+        sha1="25f55515117e14a658120a7b01a9ea5170409db4">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f5cd7e0fe9c23b939ef161def8a40930ffcc1f5d/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-panorama/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/59bf1881f6a162a4c6b6d8c4f21f969a90756787/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="6f233cb35a6ea92364130d2d48791c461ec65983">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-panorama-10.2.1_0c951dca9b9bc866f309ffa80a49cd3c6131e9ec/classes.dex" />
+        sha1="b215e312bdc1ee7bfda31674eab5df8bad45c014">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3942ed3d93237d568d01a6fb325c2cf06d44cb70/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/b73ddec1f4f0cfb10c9446c389584af9517afa44/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c3c7f923e1df76640acb3a24823600f034a5d226">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-10.2.1_78301654d26e26f98a3b7c1f32b93c974106b6d2/classes.dex" />
+        sha1="125bce1fb2d481b964fabf75f0949957ebe9ecd1">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ab3b7c08aa0298d5fc82eb2c884e3da299b2e9ec/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/25.3.0/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/11728779442e596a490157fc616f2bdd2d885907/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a3e61044038fb54cddf6b8dc79f41d2b57f42caf">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-recyclerview-v7-25.3.0_48c88468bc4139fea7d4e5506f424f2d743b056c/classes.dex" />
+        sha1="44098e691b36776973374ac03afe0225b17f8a74">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_85e41d091b430dbf3b8bd0b4dff9605f5e80fd07/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/5d030af5c15bbad2d6b29b7c3f1b70ee87e87b66/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c7626a9aa507bbbdc16188bc9a9f9bf3370c1ddd">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a3b86fa32fdfc9c8c0f448f9761ccf0ae9da841b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/c4b6b1e85390ac760a80f38d326893d408da5d60/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="abf7c64e0bbaaa931738856734f76646ae62d9a5">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_54c2f80e99bfc0a8526747027616e5204c2ee5a3/classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -376,269 +124,296 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="b84201dec31c4df5ab7b7b0990f981e87199ee4d">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_88780dede1e7a4a831d635a31c920cfac25f0ef0/classes.dex" />
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_88780dede1e7a4a831d635a31c920cfac25f0ef0/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-basement/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/52355d18848719b00bc156fd43ea5c46db1b4163/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="bdcc2a9572f18b8c90a3a157cab6cdfc97c6c736">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-basement-10.2.1_655b6d404e492bd1e7186bbbf022de6783ad43b0/classes.dex" />
+        sha1="b136ac09f209c1d91fec7db8518e33d4373c8f39">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4d94985ae3f0b8a20955cc7a22beda9f81f5c7d9/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tagmanager-api/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/bf60a1bac796edbe45d72c7f9d9ebd091e9186b8/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="536fd6afd6e1280607c5d70306eb32d385db7964">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tagmanager-api-10.2.1_b07a567bbdac36284ceff49f7fa115c41a9a8b9a/classes.dex" />
+        sha1="12032271e6be735e811ad529cb08ff066c381640">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9eda349f60fd3b1d8f6afb4cd382932d72235b65/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-gass/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bfd85a88cf976eb2c54507cc914d8e8914c2f71e">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-gass-10.2.1_ac44dce58758f724b809ba87dbfd3f2af10cb23f/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5cc5ef8347a6bafa14556cbd35230aa9b3431bb0">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.3.0_821ee0479bd0b6285f01864f280196ef77594208/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-messaging/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b215e312bdc1ee7bfda31674eab5df8bad45c014">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-messaging-10.2.1_8b9afe69ba70c6e34d030a75e24fa46c57bd9f44/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/support-fragment/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-fragment-25.3.0_a066c16b25cd4bf33e713deb115e0a7e194982f8/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-analytics/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a5d5553c308643a9022f15513ebdd59e9c78d82">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-analytics-10.2.1_ed662bf3b362389ef6a638d7083f43804095ceb1/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-location/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bb115a110992b254f767f337da233071f6f940b8">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-location-10.2.1_a52de9ce5299afbcbb68b59d14e483d704a96666/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-analytics-impl/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7d67042688d34474a82fe4ef4c6514ef471377ef">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-analytics-impl-10.2.1_130f6d735c7aef50791e67e128f456f985f5ae25/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-storage-common/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="44098e691b36776973374ac03afe0225b17f8a74">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-storage-common-10.2.1_a9ff55826a5772e1a56396e291518bbebde627de/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/support-v13/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="09adf6e61abc0fe3b2cb5b1795a7033572475fad">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v13-25.3.0_178d17142ffee94aa3750f3fda2c8cb945654142/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-clearcut/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3683531139103cc263b71d8b5ac6062832a8fd30">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-clearcut-10.2.1_e21c206e4408e29e682a3685e236af68169598b4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-appindexing/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="125bce1fb2d481b964fabf75f0949957ebe9ecd1">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-appindexing-10.2.1_0b4f3ebe034698db87b7306fcaafe65678ab37bd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/support-vector-drawable/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d6a04527c17597019dad82777c5094a3d60d1c33">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-vector-drawable-25.3.0_2d6785e91460f824fb02eeff58c5c4e1a63d9009/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-fitness/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="a3826817a4de1daa170c33bbc04db24ab6826bd5">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-fitness-10.2.1_0311840fc5c9e6f13069ae1cf89b75d9035f9ec5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/support-compat/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="93c10d68ab5ea070f15782ae6d3a28d1f1d8f45e">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-compat-25.3.0_43ef1a58957647a05dcabb82c7aa2a14535042b4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-auth/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="25f55515117e14a658120a7b01a9ea5170409db4">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-auth-10.2.1_0afe64386513545086c5ba88011fd4e5b02ebbba/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.android.support/support-v4/25.3.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-v4-25.3.0_f3c6c56bc9339dd88bfb63c97221a04ca0659938/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-database-connection/10.2.1/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2a7ffe939ffd830b5d4052f3c1c4c235923790ce">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-database-connection-10.2.1_616d24f96df40d3c158ac6cb246e46546790f270/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/Téléchargements/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/constraint-layout-solver-1.0.2_847beb5c7443136b1dba1dac80528cc689cb7561/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-plus/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/d10a71f8ae39881099348b28064b56983fe691aa/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="4b32372f6821e003ae24cd3389bdd7925247f100">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-plus-10.2.1_f99c8eb138216f57d91734cb731593550269ed66/classes.dex" />
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_183e202c3b5b50da0bf4d0184701ea691fbc477a/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-crash/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/d0ff64c8224f523a9b0729ebc431c350a2f4df61/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="b2349ddfe04831042844cbf055e5a072da37ddf8">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-crash-10.2.1_5f4166215772981e02880ce267da93c16daade72/classes.dex" />
+        sha1="c7ba26433d9e9f4429d83ff65ad79bfc801dc00a">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d50b6c2d385d39d028ccb37ff60ad121dae976c9/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-maps/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/a741cc0df6930b7f617cb204385916c4188991f6/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c7626a9aa507bbbdc16188bc9a9f9bf3370c1ddd">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-maps-10.2.1_fb204e476fe201fb96a7e89387502bd2e4920362/classes.dex" />
+        sha1="734e80dffea7bd76c18ae256822a124c30d85850">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_df66aa45882d9060559201cf58956e74c7552864/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/de.hdodenhof/circleimageview/2.1.0/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/31ed737e8559d73daa61cd7c98a41d7bd705538d/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a2af9c72ccaa4c5c049b500ca6ea664a4ce1f7d4">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/de.hdodenhof-circleimageview-2.1.0_3f1433916d9affe546c8bac29724526b8fb9d30e/classes.dex" />
+        sha1="825c2e97a00df4df5b0f3081faa4fd6280cd7c72">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fe0040751da007b1b82fdb3370ccd88eb25d22c0/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-appinvite/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/98a10e836e2b52abd7820512bfc0f20dbe206ae3/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6c74dab42788b458960618238f338d324b6f0656">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bc649a24c02045bb6357d9357f7cfae0e8907973/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/Téléchargements/build-tools/25.0.2/renderscript/lib/renderscript-v8.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="05668b8cd6c7b07f152b6a5b4c6cff620817ba0f">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/renderscript-v8_3e90b878256d329bca5ae6a0aec1f4ba14b1fef1/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/8d9e6e19304b18e3ec4cca97e614a11ead64bb49/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="0bb2f0934fa55799508ba58ffc9ba579b35744b8">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_47fc06265710e39a3963532a5af0be2c0ad53f5f/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/9a5dcb30acdd39b2211b3c3fc2724871b207557a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="cfa47e1b140562d47bc670629d07e209cd8b02c4">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c384b50d958eeb436b877883bc6ca888fb0046dc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/b272ca4c6e4dfd474f41bcafdac61fdebe8210e1/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb004ea36f8802bad30000e286c177691740a322">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_67d253aad4b78ad2ebc2dcdc98b72e0fadc0ef17/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/e60e05ec4d697b70048cb21d5dde48f97387a89b/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="1f9df8b2bfff203397548ee400789154968adfe8">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-appinvite-10.2.1_13ca0f000a4fc550f3652e635adc77d998450079/classes.dex" />
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f30fb33d00154b92f6ab503f71d5bece45df7fa9/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-base/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/735f2e05753814cf6b19db77b7040c765c8da4ee/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="19696dc358ac668e341f28c41e3387d61ccdb81d">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-base-10.2.1_ca65121ec1c688c81b00dbecc12862567dddeb0d/classes.dex" />
+        sha1="cce5792fa30ee8520620f298bf920309423b180f">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_38b3da73703d55d263bdd4416397075eb2b02984/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.android.gms/play-services-tasks/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/0d46f23e5c204438fd948700e89ff9b736810eae/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="6003d64df88a6ce5e961fa2bad7f1b9b97689ac1">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.android.gms-play-services-tasks-10.2.1_97c09c95d8d25771c80dd2b10cc2edddf0131eeb/classes.dex" />
+        sha1="3683531139103cc263b71d8b5ac6062832a8fd30">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_21f33e6d34ec126325599af6b35fe14926f50ded/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.roughike/bottom-bar/2.1.2/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/a35a48409463f46ca576968b79a9e055715529e2/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="22161bb3f49d9c4c0d6606d147f42021318a65be">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.roughike-bottom-bar-2.1.2_7435a5c44c6f8577872683dcd856cffe4720f7f1/classes.dex" />
+        sha1="a3826817a4de1daa170c33bbc04db24ab6826bd5">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9cf1c1e76303a3346bbdbca49a13eae7b3f377e7/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/exploded-aar/com.google.firebase/firebase-common/10.2.1/jars/classes.jar"
+        jar="/home/mathieu/.android/build-cache/5453aaa9a66642bcdf6fa446ff66ae00b0dd7adf/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a1aa1dd9917e887bfe732cc5e561ae6ae8f9a84a">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.google.firebase-firebase-common-10.2.1_a8d94f9307ef529631dc8c24449c90c994d3d041/classes.dex" />
+        sha1="7d67042688d34474a82fe4ef4c6514ef471377ef">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3f724c281013f7ddd355aa452b7adfbccdf3b77a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/69b5c9cff15ab8f1d4d529ad997d357cbf40c33b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d81a3b0a16f48b4456f442552b62f4b1a472ce24">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_02f8e767eecaa29dbfff54c69a91ef4fb9b66fde/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/95751745174c7d45502e6403be718becda125c55/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bb115a110992b254f767f337da233071f6f940b8">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c3a4c8ecc77ec7750e5c971ee86393d34dddb1c0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/da4755f45f8607b6da3f350757e4d6a11f0896eb/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="8dfe54fbaf4f2a27d395ddf806d0c011170999e0">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_efa9fec504d80aa18075535b9ed042e60da6882a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/0f00e94ae8bbb86189f5753090c79dc2576e2c8d/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efae381df589f3d4977c346c8a980f030315bb8b">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f0c89715041cb21946fe45a513ca911cb901c123/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/b7c3b5fbdc8c2676b0837bce459e6ae5c2449c8f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d395c5142f474891c7750f13b6a85d14682f166b">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_6f0990b9d1fbf94febf24985cfed79befe8551c6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/58c8e08f0787de9e08a8b7ab173a768f0603e671/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="c3c7f923e1df76640acb3a24823600f034a5d226">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_266628d039df70e7820dc1324432890bde856a1d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/064255b9e523181c96f2c01ec2ba05002e51309b/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da5c606c36276a12a356e351882044c6b4b9e8d4">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fa21c53b1701e35de415f86dcd3a9140c71794e6/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/7e4f90bbb09be4173846e4737a1ae5fc1257c79a/output/jars/libs/internal_impl-24.0.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6763651ec29b4c95e7bbe63fc393ffcc8c4c2c5">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/internal_impl-24.0.0_d5cf586ec1890a5f7bd9efd3a96e76f3fc16da16/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/465c9eb5933612634ff99fc6c0d0b5053aae132a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="ec7d3099b4e3cf23230c78acaae438f3371e1c19">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_cf600f9635fee7aba9943a8141380e54a4968c97/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/8b3c83bc96abb2e9b5c06707b2b6106ee3440570/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b6818f5804ca0b5eb089d902458faea4179eca1d">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fc1e49afa5216256ee4c46fb9311dd1060725a7e/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/95eafb161d1a4f3199f4dc2fb6f1e060d4fb6915/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6f233cb35a6ea92364130d2d48791c461ec65983">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_a45d32d50677a6bf01e4e5a14828b5ecd3522e5b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/e3e0751a3c679f2c3b6b3fa958a130d73b31c900/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="e4851331b3944beb6e7f77316a7661f53781da62">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_fbd28f8789499dec980b189c61bca459f52e4e75/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/14374299d440896dbf802c59185ea6fe9bc1ecf4/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bfd85a88cf976eb2c54507cc914d8e8914c2f71e">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f1bbd8ab5cdd23b0711999f1e63e7c1541c2632a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/b8c6847de7b2408761c5f9325d392af83a2d25ec/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b2349ddfe04831042844cbf055e5a072da37ddf8">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_20261f1a4e03f8c1f9e22c3f098068b41f568db7/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/c402597a36baf4d205ff8f8f34f134713cfe6dec/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="536fd6afd6e1280607c5d70306eb32d385db7964">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c9ca7807bcff286f9538331bde7c260425f8d2cc/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/mathieu/.android/build-cache/a1b16510629607e7503d2329715e355038dcf0c7/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="dbae35d7fc3427d30bef0037bdf61ad0d8d984f8">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ece9f1c25a205a1cbc59c27e66deaa277814ec20/classes.dex" />
     </item>
 
 </items>

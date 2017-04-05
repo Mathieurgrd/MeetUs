@@ -185,15 +185,6 @@
         android:layout_marginBottom="18dp"
         android:id="@+id/mStatusTextView" />
 
-    <Button
-        android:text="@string/verify_email"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/verify_email_button"
-        android:layout_below="@+id/buttonSignUp"
-        android:layout_toRightOf="@+id/imageButton5"
-        android:layout_toEndOf="@+id/imageButton5" />
-
     <TextView
 
         android:layout_width="wrap_content"

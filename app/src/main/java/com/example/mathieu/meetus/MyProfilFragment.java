@@ -1,11 +1,13 @@
 package com.example.mathieu.meetus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
 
 
 /**
@@ -16,7 +18,8 @@ import android.widget.TextView;
  * Use the {@link //ScreenSlidePageFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyProfilFragment extends Fragment {
+public class MyProfilFragment extends Fragment implements View.OnClickListener {
+
     //ConstructeurPrivéVide
     public MyProfilFragment() {}
 
@@ -25,10 +28,16 @@ public class MyProfilFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_screen_slide_page, container, false);
 
-        TextView tv = (TextView) v.findViewById(R.id.Random);
-        tv.setText(getArguments().getString("Votre Profil"));
 
+
+
+
+        v.findViewById(R.id.SignOutButton);
         return v;
+    }
+    private void signOut() {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
     }
 
     public static MyProfilFragment newInstance(String text) {
@@ -40,5 +49,16 @@ public class MyProfilFragment extends Fragment {
         fProfil.setArguments(b);
 
         return fProfil;
+    }
+
+    @Override
+    public void onClick(View v) {
+        int i = v.getId();
+        if(i == R.id.SignOutButton){
+            signOut();
+            startActivity(new Intent(MyProfilFragment.this.getContext() , LoginActivity.class));
+
+        }
+
     }
 }

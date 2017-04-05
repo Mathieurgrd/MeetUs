@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+
 public class CreateProfilActivity extends AppCompatActivity {
 
 
@@ -26,6 +28,9 @@ public class CreateProfilActivity extends AppCompatActivity {
     ImageView imageViewProfil;
 
     public final static String EXTRA_REQUEST = "Bienvenue";
+
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
