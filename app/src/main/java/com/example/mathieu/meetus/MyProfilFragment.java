@@ -32,7 +32,7 @@ public class MyProfilFragment extends Fragment implements View.OnClickListener {
 
 
 
-        v.findViewById(R.id.SignOutButton);
+        v.findViewById(R.id.SignOutButton).setOnClickListener(this);
         return v;
     }
     private void signOut() {

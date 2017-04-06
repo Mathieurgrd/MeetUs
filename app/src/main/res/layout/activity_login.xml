@@ -8,17 +8,9 @@
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
+    android:background="#ffffff"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mathieu.meetus.LoginActivity">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_logowcs"
-        android:id="@+id/imageView3"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
 
     <ImageView
         android:layout_width="wrap_content"
@@ -36,95 +28,22 @@
         android:id="@+id/imageView9"
         android:maxHeight="15dp"
         android:maxWidth="15dp"
-        android:layout_marginBottom="38dp"
+        android:layout_marginBottom="41dp"
         android:layout_alignBottom="@+id/imageView2"
-        android:layout_toLeftOf="@+id/imageView3"
-        android:layout_toStartOf="@+id/imageView3" />
+        android:layout_alignRight="@+id/emailText"
+        android:layout_alignEnd="@+id/emailText" />
 
     <ImageView
         android:layout_width="165dp"
         android:layout_height="165dp"
         app:srcCompat="@drawable/welcome"
+        android:layout_centerHorizontal="true"
         android:maxWidth="25dp"
         android:id="@+id/imageView6"
         android:layout_marginTop="17dp"
         android:layout_alignParentTop="true"
         android:layout_toLeftOf="@+id/imageView9"
         android:layout_toStartOf="@+id/imageView9" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/facebookbutton"
-        android:id="@+id/imageButton3"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rectangle_twitter"
-        android:id="@+id/imageButton5"
-        android:layout_above="@+id/imageView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="7dp" />
-
-    <TextView
-        android:text="@string/Signupwith"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView"
-        android:layout_above="@+id/imageButton5"
-        android:layout_alignLeft="@+id/imageView6"
-        android:layout_alignStart="@+id/imageView6"
-        android:layout_marginLeft="34dp"
-        android:layout_marginStart="34dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/fillfb"
-        android:id="@+id/imageView18"
-        android:layout_below="@+id/imageButton5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="38dp"
-        android:layout_marginStart="38dp" />
-
-    <ImageView
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/filltwitter1"
-        android:id="@+id/imageView14"
-        android:layout_above="@+id/imageButton3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="27dp"
-        android:layout_marginStart="27dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/twitter"
-        android:id="@+id/imageView19"
-        android:layout_alignTop="@+id/imageView14"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="13dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/facebook"
-        android:id="@+id/imageView20"
-        android:layout_marginTop="8dp"
-        android:layout_below="@+id/imageButton5"
-        android:layout_alignLeft="@+id/textView"
-        android:layout_alignStart="@+id/textView" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -152,19 +71,20 @@
         android:text="@string/SignIn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="12dp"
         android:id="@+id/buttonSignIn"
-        android:layout_alignTop="@+id/passwordText"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:background="@drawable/barreguess"
+        android:layout_below="@+id/passwordText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         android:text="@string/SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/buttonSignUp"
-        android:layout_alignBaseline="@+id/buttonSignIn"
-        android:layout_alignBottom="@+id/buttonSignIn"
+        android:background="@drawable/barreguess"
+        android:layout_below="@+id/buttonSignIn"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
@@ -172,10 +92,11 @@
         android:text="@string/SignOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/buttonSignOut"
-        android:layout_alignBaseline="@+id/buttonSignIn"
-        android:layout_alignBottom="@+id/buttonSignIn"
-        android:layout_centerHorizontal="true" />
+        android:background="@drawable/barreguess"
+        android:id="@+id/buttonReset"
+        android:layout_below="@+id/buttonSignUp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:layout_width="50dp"

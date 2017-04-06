@@ -1,5 +1,6 @@
 package com.example.mathieu.meetus;
 
+import android.app.ProgressDialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     private FirebaseAuth mAuth;
     private static final String TAG = "EmailPassword";
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private ProgressDialog progress;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,7 +87,8 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             return;
         }
 
-        //showProgressDialog();
+        progress = ProgressDialog.show(this, "Creating Account",
+                "Loading...", true);
 
         // [START create_user_with_email]
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -101,7 +104,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                             Toast.makeText(SignUpActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
                         }
-
+                        progress.dismiss();
                     }
                 });
         // [END create_user_with_email]
@@ -145,6 +148,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         } else {
             inputEmail.setError(null);
         }
+        String verify = verifyPassword.getText().toString();
+        if (TextUtils.isEmpty(verify)){
+            verifyPassword.setError("One does not simply don't check his password");
+        }
 
         String password = inputPassword.getText().toString();
         if (TextUtils.isEmpty(password)) {
@@ -160,7 +167,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     public void onClick(View v) {
         int i = v.getId();
-        if (i == R.id.buttonSignUp) {
+        if (i == R.id.buttonSignUp ) {
             createAccount(inputEmail.getText().toString(), inputPassword.getText().toString());
         }
         if (i == R.id.verify_email_button) {

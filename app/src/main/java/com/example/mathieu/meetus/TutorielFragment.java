@@ -5,7 +5,6 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 
 
 /**
@@ -26,8 +25,6 @@ public class TutorielFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_tutoriel, container, false);
 
-        TextView tv = (TextView) v.findViewById(R.id.tvFragTuto);
-        tv.setText(getArguments().getString("msglol"));
 
         return v;
     }

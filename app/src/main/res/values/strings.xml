@@ -13,7 +13,7 @@
 
     <string name="SignIn">Sign In</string>
 
-    <string name="SignOut">Sign Out</string>
+    <string name="SignOut">Reset Password</string>
 
     <string name="auth_failed">Echec</string>
 
@@ -185,12 +185,15 @@
     <string name="lbl_forgot_password">Forgot password string</string>
     <string name="forgot_password_msg">Forgot password msg</string>
     <string name="btn_reset_password">Reset Password</string>
-    <string name="btn_back">ButtonBack</string>
+    <string name="btn_back">Oh I remember now !</string>
     <string name="guess">GUESS</string>
     <string name="trybutton">TRY</string>
     <string name="textviewspecialite">Spécialité</string>
     <string name="textviewville">Ville</string>
     <string name="guesstvage">Age</string>
     <string name="guesstvwild_side">Wild Side</string>
+    <string name="show_me_your_wild_face">Show me your Wild face !</string>
+    <string name="welcomeprofilstring">Welcome on Meetus</string>
+    <string name="nxt_string_wlcome">Next</string>
 
 </resources>

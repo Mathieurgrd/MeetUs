@@ -30,12 +30,10 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
 
         inputEmail = (EditText) findViewById(R.id.email);
         findViewById(R.id.btn_reset_password).setOnClickListener(this);
-         findViewById(R.id.btn_back).setOnClickListener(this);
+        findViewById(R.id.btn_back).setOnClickListener(this);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
         mAuth = FirebaseAuth.getInstance();
-
-
 
 
     }
@@ -44,10 +42,11 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
     public void onClick(View v) {
         int i = v.getId();
         inputEmail = (EditText) findViewById(R.id.email);
-        if( i == R.id.btn_reset_password){
+        if (i == R.id.btn_reset_password) {
             String email = inputEmail.getText().toString().trim();
             if (TextUtils.isEmpty(email)) {
-                Toast.makeText(getApplication(), "Enter your registered email id", Toast.LENGTH_SHORT).show();
+                inputEmail.setError("We need it, dummy!");
+                Toast.makeText(getApplication(), "Enter your registered email id, if you can't remember your e-mail ... Well you're pretty much screw.", Toast.LENGTH_SHORT).show();
                 return;
             }
 
@@ -59,7 +58,7 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
                             if (task.isSuccessful()) {
                                 Toast.makeText(ResetPasswordActivity.this, "We have sent you instructions to reset your password!", Toast.LENGTH_SHORT).show();
                             } else {
-                                Toast.makeText(ResetPasswordActivity.this, "Failed to send reset email!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(ResetPasswordActivity.this, "Failed to send reset email, the developper is an idiot!", Toast.LENGTH_SHORT).show();
                             }
 
                             progressBar.setVisibility(View.GONE);
@@ -67,7 +66,7 @@ public class ResetPasswordActivity extends AppCompatActivity implements View.OnC
                     });
 
         }
-        if (i == R.id.btn_back){
+        if (i == R.id.btn_back) {
             startActivity(new Intent(getApplicationContext(), LoginActivity.class));
         }
 

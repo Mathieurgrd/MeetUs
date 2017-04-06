@@ -1,9 +1,6 @@
 package com.example.mathieu.meetus;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -22,11 +19,12 @@ import android.widget.TextView;
  * Use the {@link GuessGame#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class GuessGame extends Fragment {
+public class GuessGame extends Fragment{
 
 
-    Button Try ;
-    ImageView PhotoProfil;
+    private Button Try ;
+    private static final String TAG = "EmailPassword";
+    private ImageView PhotoProfil;
 
 
 
@@ -37,26 +35,25 @@ public class GuessGame extends Fragment {
 
 
 
-        @Override
+    @Override
         public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
             View v = inflater.inflate(R.layout.fragment_guess_game, container, false);
 
              PhotoProfil = (ImageView) v.findViewById(R.id.PhotoProfil);
 
-            final Activity activity = getActivity();
-            final View content = activity.findViewById(android.R.id.content).getRootView();
-            if (content.getWidth() > 0) {
-                Bitmap image = BlurBuilder.blur(content);
-                PhotoProfil.setImageDrawable(new BitmapDrawable(activity.getResources(), image));
+       /** Activity activity = getActivity();
+        if (activity != null && isAdded()){
 
 
-            }
+            Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.id.PhotoProfil);
+            Bitmap ProfilBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight());
+
+        Bitmap blurredProfil = blurRenderScript(GuessGame.this.getContext(), ProfilBitmap , 25);
 
 
+            PhotoProfil.setImageBitmap(blurredProfil);
 
-
-
-
+        } */
 
 
 
@@ -80,6 +77,55 @@ public class GuessGame extends Fragment {
 
 
         }
+
+
+//second parametre is radius
+
+    /**
+    @SuppressLint("NewApi")
+    public static Bitmap blurRenderScript(Context context, Bitmap smallBitmap, int radius) {
+        try {
+            smallBitmap = RGB565toARGB888(smallBitmap);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        Bitmap bitmap = Bitmap.createBitmap(
+                smallBitmap.getWidth(), smallBitmap.getHeight(),
+                Bitmap.Config.ARGB_8888);
+
+        RenderScript renderScript = RenderScript.create(context);
+
+        Allocation blurInput = Allocation.createFromBitmap(renderScript, smallBitmap);
+        Allocation blurOutput = Allocation.createFromBitmap(renderScript, bitmap);
+
+        ScriptIntrinsicBlur blur = ScriptIntrinsicBlur.create(renderScript,
+                Element.U8_4(renderScript));
+        blur.setInput(blurInput);
+        blur.setRadius(radius); // radius must be 0 < r <= 25
+        blur.forEach(blurOutput);
+
+        blurOutput.copyTo(bitmap);
+        renderScript.destroy();
+
+        return bitmap;
+
+    }
+
+    private static Bitmap RGB565toARGB888(Bitmap img) throws Exception {
+        int numPixels = img.getWidth() * img.getHeight();
+        int[] pixels = new int[numPixels];
+
+        //Get JPEG pixels.  Each int is the color values for one pixel.
+        img.getPixels(pixels, 0, img.getWidth(), 0, 0, img.getWidth(), img.getHeight());
+
+        //Create a Bitmap of the appropriate format.
+        Bitmap result = Bitmap.createBitmap(img.getWidth(), img.getHeight(), Bitmap.Config.ARGB_8888);
+
+        //Set RGB pixels.
+        result.setPixels(pixels, 0, result.getWidth(), 0, 0, result.getWidth(), result.getHeight());
+        return result;
+    } */
 
 
     public static GuessGame newInstance(String text) {

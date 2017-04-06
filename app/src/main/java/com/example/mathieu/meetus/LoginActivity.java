@@ -1,4 +1,5 @@
 package com.example.mathieu.meetus;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -6,9 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -22,8 +21,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     private EditText inputEmail, inputPassword;
     private static final String TAG = "EmailPassword";
     private FirebaseAuth mAuth;
-    private ProgressBar progressBar;
-    private Button btnSignup, btnLogin, btnReset;
+    private ProgressDialog progress;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
     @Override
@@ -39,9 +37,9 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
         inputEmail = (EditText) findViewById(R.id.emailText);
         inputPassword = (EditText) findViewById(R.id.passwordText);
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
         findViewById(R.id.buttonSignUp).setOnClickListener(this);
         findViewById(R.id.buttonSignIn).setOnClickListener(this);
+        findViewById(R.id.buttonReset).setOnClickListener(this);
         //Get Firebase auth instance
         mAuth = FirebaseAuth.getInstance();
 
@@ -115,7 +113,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         }
 
 
-        //showProgressDialog();
+        progress = ProgressDialog.show(this, "Signin' you in", "please wait ..." ,true);;
 
         // [START sign_in_with_email]
         mAuth.signInWithEmailAndPassword(email, password)
@@ -123,7 +121,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
-                        startActivity(new Intent(getApplicationContext(), ScreenSlideActivity.class));
+                        startActivity(new Intent(getApplicationContext(), CreateProfilActivity.class));
 
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
@@ -134,20 +132,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                                     Toast.LENGTH_SHORT).show();
                         }
 
-                        // [START_EXCLUDE]
-                        if (!task.isSuccessful()) {
-                            Toast.makeText(LoginActivity.this, R.string.auth_failed, Toast.LENGTH_SHORT).show();
-
-                        }
-                        //hideProgressDialog();
+                        progress.dismiss();
                         // [END_EXCLUDE]
                     }
                 });
         // [END sign_in_with_em
-    }
-
-    private void signOut() {
-        mAuth.signOut();
     }
 
     @Override
@@ -159,7 +148,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         if(i == R.id.buttonSignUp){
             startActivity(new Intent(getApplicationContext(),SignUpActivity.class ));
         }
-        if(i==R.id.buttonSignOut) { signOut();
+        if(i==R.id.buttonReset) { startActivity(new Intent(getApplicationContext(), ResetPasswordActivity.class));
             ;
         }
 

@@ -6,49 +6,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.mathieu.meetus.LoginActivity">
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/ic_logowcs"
-        android:id="@+id/imageView3"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/facebookbutton"
-        android:id="@+id/imageButton3"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/rectangle_twitter"
-        android:id="@+id/imageButton5"
-        android:layout_above="@+id/imageView3"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="7dp" />
-
-    <TextView
-        android:text="@string/Signupwith"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/SignUpWithTextv"
-        android:layout_above="@+id/imageButton5"
-        android:layout_alignLeft="@+id/imageView6"
-        android:layout_alignStart="@+id/imageView6"
-        android:layout_marginLeft="34dp"
-        android:layout_marginStart="34dp" />
 
 
     <TextView
@@ -56,89 +18,49 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/mDetailTextView"
-        android:layout_below="@+id/passwordText"
-        android:layout_alignLeft="@+id/imageView19"
-        android:layout_alignStart="@+id/imageView19"
-        android:layout_marginTop="28dp" />
+        android:layout_below="@+id/verify_email_button"
+        android:layout_toRightOf="@+id/imageView2"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_marginLeft="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="11dp" />
 
     <TextView
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:id="@+id/mStatusTextView"
-        android:layout_above="@+id/imageView9"
-        android:layout_toLeftOf="@+id/editTextVerifyPass"
-        android:layout_toStartOf="@+id/editTextVerifyPass"
-        android:layout_marginBottom="51dp" />
+        android:layout_marginTop="11dp"
+        android:layout_below="@+id/verify_email_button"
+        android:layout_toLeftOf="@+id/imageView2"
+        android:layout_toStartOf="@+id/imageView2" />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/meetus"
         android:id="@+id/imageView2"
-        android:layout_marginTop="96dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/emailText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp" />
 
     <Button
         android:text="@string/verify_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/verify_email_button"
-        android:layout_above="@+id/SignUpWithTextv"
-        android:layout_alignRight="@+id/mDetailTextView"
-        android:layout_alignEnd="@+id/mDetailTextView"
-        android:layout_marginBottom="11dp" />
+        android:background="@drawable/barreguess"
+        android:layout_below="@+id/buttonSignUp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:text="@string/SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/barreguess"
         android:id="@+id/buttonSignUp"
-        android:layout_alignBottom="@+id/verify_email_button"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/twitter"
-        android:id="@+id/imageView19"
-        android:layout_marginTop="12dp"
-        android:layout_alignTop="@+id/imageView14"
-        android:layout_alignLeft="@+id/SignUpWithTextv"
-        android:layout_alignStart="@+id/SignUpWithTextv"
-        android:layout_marginLeft="18dp"
-        android:layout_marginStart="18dp" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/facebook"
-        android:id="@+id/imageView20"
-        android:minHeight="25dp"
-        android:layout_below="@+id/imageButton5"
-        android:layout_alignLeft="@+id/SignUpWithTextv"
-        android:layout_alignStart="@+id/SignUpWithTextv" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/fillfb"
-        android:id="@+id/imageView18"
-        android:layout_below="@+id/imageButton5"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginLeft="30dp"
-        android:layout_marginStart="30dp" />
-
-    <ImageView
-        android:layout_width="45dp"
-        android:layout_height="45dp"
-        app:srcCompat="@drawable/filltwitter1"
-        android:id="@+id/imageView14"
-        android:layout_above="@+id/imageButton3"
-        android:layout_alignLeft="@+id/imageView18"
-        android:layout_alignStart="@+id/imageView18" />
+        android:layout_below="@+id/passwordText"
+        android:layout_centerHorizontal="true" />
 
     <ImageView
         android:layout_width="165dp"
@@ -146,16 +68,15 @@
         app:srcCompat="@drawable/welcome"
         android:maxWidth="25dp"
         android:id="@+id/imageView6"
-        android:layout_marginBottom="38dp"
-        android:layout_alignBottom="@+id/imageView2"
-        android:layout_alignLeft="@+id/editTextVerifyPass"
-        android:layout_alignStart="@+id/editTextVerifyPass" />
+        android:layout_alignBottom="@+id/imageView9"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="9dp" />
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="@string/PasswordHint"
+        android:hint="@string/verify_your_password"
         android:ems="10"
         android:id="@+id/passwordText"
         android:layout_centerVertical="true"
@@ -166,7 +87,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
-        android:hint="@string/verify_your_password"
+        android:hint="@string/PasswordHint"
         android:ems="10"
         android:id="@+id/editTextVerifyPass"
         android:layout_above="@+id/passwordText"
@@ -190,11 +111,9 @@
         app:srcCompat="@drawable/transparent_text_effect"
         android:id="@+id/imageView9"
         android:maxHeight="15dp"
-        android:maxWidth="15dp"
-        android:layout_marginBottom="17dp"
-        android:layout_alignBottom="@+id/imageView6"
-        android:layout_toLeftOf="@+id/buttonSignUp"
-        android:layout_toStartOf="@+id/buttonSignUp" />
+        android:layout_marginBottom="29dp"
+        android:layout_alignBottom="@+id/imageView2"
+        android:layout_centerHorizontal="true" />
 
     <ProgressBar
         android:id="@+id/progressBar"
