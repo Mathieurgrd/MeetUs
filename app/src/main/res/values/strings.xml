@@ -195,5 +195,6 @@
     <string name="show_me_your_wild_face">Show me your Wild face !</string>
     <string name="welcomeprofilstring">Welcome on Meetus</string>
     <string name="nxt_string_wlcome">Next</string>
+    <string name="validateyouremail">VALIDATE YOUR EMAIL BEFORE LOGIN !</string>
 
 </resources>

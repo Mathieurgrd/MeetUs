@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -25,6 +28,7 @@ public class GuessGame extends Fragment{
     private Button Try ;
     private static final String TAG = "EmailPassword";
     private ImageView PhotoProfil;
+    private DatabaseReference myRef;
 
 
 
@@ -40,6 +44,10 @@ public class GuessGame extends Fragment{
             View v = inflater.inflate(R.layout.fragment_guess_game, container, false);
 
              PhotoProfil = (ImageView) v.findViewById(R.id.PhotoProfil);
+
+        myRef = FirebaseDatabase.getInstance().getReference("Info");
+
+
 
        /** Activity activity = getActivity();
         if (activity != null && isAdded()){

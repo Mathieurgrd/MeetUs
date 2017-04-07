@@ -20,12 +20,12 @@ public class ProfilWelcome extends AppCompatActivity implements View.OnClickList
         TextView userName = (TextView) findViewById(R.id.UserName);
         ImageView photoProfil = (ImageView) findViewById(R.id.ivPhotoProfil);
 
-        Intent myIntent = getIntent();
+        /** Intent myIntent = getIntent();
         UserProfileName myName = getIntent().getExtras().getParcelable(CreateProfilActivity.EXTRA_REQUEST);
 
         String userNameString = String.format(" %s" , myName.getmName());
 
-        userName.setText(getString(R.string.welcomeprofilstring) + userNameString);
+        userName.setText(getString(R.string.welcomeprofilstring) + userNameString);*/
     }
 
     @Override

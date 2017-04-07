@@ -34,7 +34,7 @@
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="70dp"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:background="@drawable/text_d"
         android:hint="Age"
         android:ems="10"

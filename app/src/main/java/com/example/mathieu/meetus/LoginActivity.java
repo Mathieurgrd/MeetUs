@@ -1,4 +1,5 @@
 package com.example.mathieu.meetus;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -28,8 +29,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        //Get Firebase auth instance
-        mAuth = FirebaseAuth.getInstance();
 
 
         // set the view now
@@ -43,50 +42,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         //Get Firebase auth instance
         mAuth = FirebaseAuth.getInstance();
 
-
-
-
-        // [START auth_state_listener]
-        mAuthListener = new FirebaseAuth.AuthStateListener() {
+        mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    // User is signed in
-                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
-                    startActivity(new Intent(getApplicationContext(), ScreenSlideActivity.class));
-                } else {
-                    // User is signed out
-                    Log.d(TAG, "onAuthStateChanged:signed_out");
+//                    LoginActivity.this.finish();
                 }
-                // [START_EXCLUDE]
-                //updateUI(user);
-                // [END_EXCLUDE]
             }
-        };
-        // [END auth_state_listener]
+        });
     }
 
-    // [START on_start_add_listener]
-    @Override
-    public void onStart() {
-        super.onStart();
-        mAuth.addAuthStateListener(mAuthListener);
-    }
-    // [END on_start_add_listener]
-
-    // [START on_stop_remove_listener]
-    @Override
-    public void onStop() {
-        super.onStop();
-        if (mAuthListener != null) {
-            mAuth.removeAuthStateListener(mAuthListener);
-        }
-    }
-
-        private boolean validateForm() {
+    private boolean validateForm() {
         boolean valid = true;
-
         String email = inputEmail.getText().toString();
         if (TextUtils.isEmpty(email)) {
             inputEmail.setError("Required.");
@@ -102,18 +70,19 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         } else {
             inputPassword.setError(null);
         }
-
         return valid;
     }
 
     private void signIn(String email, String password) {
         Log.d(TAG, "signIn:" + email);
+
         if (!validateForm()) {
             return;
         }
 
 
-        progress = ProgressDialog.show(this, "Signin' you in", "please wait ..." ,true);;
+        progress = ProgressDialog.show(this, "Signin' you in", "please wait ...", true);
+        ;
 
         // [START sign_in_with_email]
         mAuth.signInWithEmailAndPassword(email, password)
@@ -121,15 +90,16 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());
-                        startActivity(new Intent(getApplicationContext(), CreateProfilActivity.class));
 
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
                         // signed in user can be handled in the listener.
-                        if (!task.isSuccessful()) {
+                        if (!task.isSuccessful()) { // if failed
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(LoginActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
+                        } else { // if success
+                            startActivity(new Intent(getApplicationContext(), ScreenSlideActivity.class));
                         }
 
                         progress.dismiss();
@@ -139,19 +109,24 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         // [END sign_in_with_em
     }
 
+
+
     @Override
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.buttonSignIn) {
-                signIn(inputEmail.getText().toString(), inputPassword.getText().toString());
+
+            signIn(inputEmail.getText().toString(), inputPassword.getText().toString());
         }
-        if(i == R.id.buttonSignUp){
-            startActivity(new Intent(getApplicationContext(),SignUpActivity.class ));
+        if (i == R.id.buttonSignUp) {
+            startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
         }
-        if(i==R.id.buttonReset) { startActivity(new Intent(getApplicationContext(), ResetPasswordActivity.class));
+        if (i == R.id.buttonReset) {
+            startActivity(new Intent(getApplicationContext(), ResetPasswordActivity.class));
             ;
         }
 
     }
 }
+
 

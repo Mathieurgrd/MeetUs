@@ -21,7 +21,7 @@ public class PageLogo extends AppCompatActivity {
                 PageLogo.this.startActivity(mainIntent);
                 PageLogo.this.finish();
             }
-        }, 7000);
+        }, 4000);
 
 
 

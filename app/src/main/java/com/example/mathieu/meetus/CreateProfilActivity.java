@@ -11,20 +11,23 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CreateProfilActivity extends AppCompatActivity implements View.OnClickListener {
 
 
-
-    EditText editTextName;
-    EditText editTextAge;
-    EditText editTextTechno;
-    EditText editTextWild;
-    EditText editTextVille;
-    Toast toast;
-    int Toastduration;
-    Context context;
-    ImageView imageViewProfil;
+    private EditText editTextName;
+    private EditText editTextAge;
+    private EditText editTextTechno;
+    private EditText editTextWild;
+    private EditText editTextVille;
+    private Toast toast;
+    private FirebaseDatabase database;
+    private DatabaseReference refProfil;
+    private int Toastduration;
+    private Context context;
+    private ImageView imageViewProfil;
 
     public final static String EXTRA_REQUEST = "Bienvenue";
 
@@ -55,42 +58,51 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
     }
 
 
-
-
     @Override
     public void onClick(View v) {
         int i = v.getId();
-        if(i == R.id.buttonAddYourPhoto){}
-        if (i == R.id.buttonProfil){
+        if (i == R.id.buttonAddYourPhoto) {
+        }
+        if (i == R.id.buttonProfil) {
 
-            String userNameString = editTextName.getText().toString();
-            String userNameAge  = editTextAge.getText().toString();
-            String userNameCity = editTextVille.getText().toString();
-            String userNameTech = editTextTechno.getText().toString();
-            String userNameWild = editTextWild.getText().toString();
+            String name = editTextName.getText().toString();
+            int age = Integer.parseInt(editTextAge.getText().toString());
+            String techno = editTextTechno.getText().toString();
+            String wild = editTextWild.getText().toString();
+            String city = editTextVille.getText().toString();
 
-            if (TextUtils.isEmpty(userNameAge)) {
+
+
+
+            if (TextUtils.isEmpty(String.valueOf(age))) {
                 editTextAge.setError("Required");
             }
-            if (TextUtils.isEmpty(userNameCity)) {
+            if (TextUtils.isEmpty(city)) {
                 editTextVille.setError("Required");
             }
-            if (TextUtils.isEmpty(userNameTech)) {
+            if (TextUtils.isEmpty(techno)) {
                 editTextTechno.setError("Required");
             }
-            if (TextUtils.isEmpty(userNameString)) {
+            if (TextUtils.isEmpty(name)) {
                 editTextName.setError("Required");
             }
-            if (TextUtils.isEmpty(userNameWild)) {
+            if (TextUtils.isEmpty(wild)) {
                 editTextWild.setError("Required");
-            }
-            else{
-                // Envoi sur la Database
-                UserProfileName myName = new UserProfileName(userNameString);
-                Intent myIntent = new Intent(CreateProfilActivity.this, ProfilWelcome.class);
+            } else {
 
-                myIntent.putExtra(CreateProfilActivity.EXTRA_REQUEST, myName);
-                startActivity(myIntent);
+                // Envoi sur la Database
+
+                FirebaseDatabase database = FirebaseDatabase.getInstance();
+                DatabaseReference myRef = database.getReference("Info");
+                database = FirebaseDatabase.getInstance(); //APPELLE LA BASE DE DONNEES
+                refProfil = database.getReference("Info");
+
+
+                ProfilModel userProfile = new ProfilModel(name, age, techno, wild, city);
+                refProfil.push().setValue(userProfile);
+
+                startActivity(new Intent(CreateProfilActivity.this, ProfilWelcome.class));
+                finish();
             }
 
 

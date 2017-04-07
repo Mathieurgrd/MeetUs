@@ -9,7 +9,7 @@
 
 
 
-        <EditText
+        <TextView
             android:id="@+id/editTextTechno"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
@@ -23,7 +23,7 @@
             android:inputType="textPersonName" />
 
 
-        <EditText
+        <TextView
             android:id="@+id/editTextAge"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextVille"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
@@ -66,7 +66,7 @@
             android:hint="Ville"
             android:inputType="textPersonName" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextWild"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
@@ -78,7 +78,7 @@
             android:hint="Côté Wild"
             android:inputType="textPersonName" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextName"
             android:layout_width="wrap_content"
             android:layout_height="70dp"
