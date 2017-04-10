@@ -46,7 +46,7 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_screen_slide_page, container, false);
 
-
+        v.findViewById(R.id.buttonEditProfil).setOnClickListener(this);
         final TextView pName = (TextView) v.findViewById(R.id.editTextName);
         final TextView pAge = (TextView) v.findViewById(R.id.editTextAge);
         final TextView pTechno = (TextView) v.findViewById(R.id.editTextTechno);
@@ -127,7 +127,12 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
         if (i == R.id.SignOutButton) {
             signOut();
             startActivity(new Intent(MyProfilFragment.this.getContext(), LoginActivity.class));
+            this.getActivity().finish();
 
+        }
+        if (i == R.id.buttonEditProfil){
+            startActivity(new Intent(MyProfilFragment.this.getContext(), CreateProfilActivity.class));
+            this.getActivity().finish();
         }
 
     }

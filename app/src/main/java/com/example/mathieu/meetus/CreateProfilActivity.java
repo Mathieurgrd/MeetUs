@@ -98,6 +98,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                 refProfil = database.getReference("Info");
 
 
+
                 ProfilModel userProfile = new ProfilModel(name, age, techno, wild, city);
                 refProfil.push().setValue(userProfile);
 
