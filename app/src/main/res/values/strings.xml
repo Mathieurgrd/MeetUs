@@ -196,5 +196,6 @@
     <string name="welcomeprofilstring">Welcome on Meetus</string>
     <string name="nxt_string_wlcome">Next</string>
     <string name="validateyouremail">VALIDATE YOUR EMAIL BEFORE LOGIN !</string>
+    <string name="toastcheckyourmail">Check your mailbox to login ;)</string>
 
 </resources>

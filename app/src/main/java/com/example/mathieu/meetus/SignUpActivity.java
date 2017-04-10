@@ -101,27 +101,31 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         // [START send_email_verification]
 
         final FirebaseUser user = mAuth.getCurrentUser();
-        user.sendEmailVerification()
-                .addOnCompleteListener(this, new OnCompleteListener<Void>() {
-                    @Override
-                    public void onComplete(@NonNull Task<Void> task) {
-                        // [START_EXCLUDE]
-                        // Re-enable button
-                        findViewById(R.id.verify_email_button).setEnabled(true);
 
-                        if (task.isSuccessful()) {
-                            Toast.makeText(SignUpActivity.this,
-                                    "Verification email sent to " + user.getEmail(),
-                                    Toast.LENGTH_SHORT).show();
-                        } else {
-                            Log.e(TAG, "sendEmailVerification", task.getException());
-                            Toast.makeText(SignUpActivity.this,
-                                    "Failed to send verification email.",
-                                    Toast.LENGTH_SHORT).show();
+        if (user != null) {
+
+            user.sendEmailVerification()
+                    .addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            // [START_EXCLUDE]
+                            // Re-enable button
+                            findViewById(R.id.verify_email_button).setEnabled(true);
+
+                            if (task.isSuccessful()) {
+                                Toast.makeText(SignUpActivity.this,
+                                        "Verification email sent to " + user.getEmail(),
+                                        Toast.LENGTH_SHORT).show();
+                            } else {
+                                Log.e(TAG, "sendEmailVerification", task.getException());
+                                Toast.makeText(SignUpActivity.this,
+                                        "Failed to send verification email.",
+                                        Toast.LENGTH_SHORT).show();
+                            }
+
                         }
-
-                    }
-                });
+                    });
+        }
         // [END send_email_verification]
     }
 
@@ -140,6 +144,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "createUserWithEmail:onComplete:" + task.isSuccessful());
+                        Toast.makeText(SignUpActivity.this, R.string.toastcheckyourmail, Toast.LENGTH_LONG).show();
 
                         // If sign in fails, display a message to the user. If sign in succeeds
                         // the auth state listener will be notified and logic to handle the
@@ -174,7 +179,7 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
             mStatusTextView.setText(R.string.signed_out);
             mDetailTextView.setText(null);
 
-            findViewById(R.id.verify_email_button).setVisibility(View.VISIBLE);
+            findViewById(R.id.verify_email_button).setVisibility(View.GONE);
             findViewById(R.id.buttonSignUp).setVisibility(View.VISIBLE);
 
         }
@@ -197,6 +202,11 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         String verify = verifyPassword.getText().toString();
         if (TextUtils.isEmpty(verify)){
             verifyPassword.setError("One does not simply don't check his password");
+            valid = false;
+        }
+        if (verifyPassword == inputPassword){
+            verifyPassword.setError("Your pass does not match");
+            inputPassword.setError("Your pass does not match");
             valid = false;
         }else {
             verifyPassword.setError(null);
@@ -223,7 +233,10 @@ public class SignUpActivity extends AppCompatActivity implements View.OnClickLis
         if (i == R.id.verify_email_button){
 
             final FirebaseUser user = mAuth.getCurrentUser();
-            user.sendEmailVerification();
+
+            if (user != null){
+                sendEmailVerification();
+            }
         }
 
 

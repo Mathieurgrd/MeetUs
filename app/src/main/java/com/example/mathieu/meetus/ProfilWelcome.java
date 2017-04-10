@@ -25,8 +25,8 @@ public class ProfilWelcome extends AppCompatActivity implements View.OnClickList
 
         String userNameString = String.format(" %s" , myName.getmName());
 
-        userName.setText(getString(R.string.welcomeprofilstring) + userNameString);*/
-    }
+        userName.setText(getString(R.string.welcomeprofilstring) + userNameString);
+    */ }
 
     @Override
     public void onClick(View v) {

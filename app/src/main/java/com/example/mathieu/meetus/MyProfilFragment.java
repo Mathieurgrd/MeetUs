@@ -7,10 +7,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 
 /**
@@ -21,41 +27,81 @@ import com.google.firebase.database.FirebaseDatabase;
  * Use the {@link //ScreenSlidePageFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MyProfilFragment extends Fragment implements View.OnClickListener {
+public class MyProfilFragment extends Fragment implements ChildEventListener, View.OnClickListener {
 
-    FirebaseDatabase database ;
-    DatabaseReference myRef;
+    DatabaseReference mRef;
+    public TextView pWild;
+    public TextView pVille;
+    public TextView pTechno;
+    public TextView pAge;
+    public TextView pName;
+
 
     //ConstructeurPrivéVide
-    public MyProfilFragment() {}
+    public MyProfilFragment() {
+    }
 
 
-     @Override
+    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_screen_slide_page, container, false);
 
+
         final TextView pName = (TextView) v.findViewById(R.id.editTextName);
-        TextView pAge = (TextView) v.findViewById(R.id.editTextAge);
-        TextView pTechno = (TextView) v.findViewById(R.id.editTextTechno);
-        TextView pVille = (TextView) v.findViewById(R.id.editTextVille);
-        TextView pWild = (TextView) v.findViewById(R.id.editTextWild);
-/**
-        final FirebaseDatabase database = FirebaseDatabase.getInstance();
-        myRef = FirebaseDatabase.getInstance().getReference("Info");
+        final TextView pAge = (TextView) v.findViewById(R.id.editTextAge);
+        final TextView pTechno = (TextView) v.findViewById(R.id.editTextTechno);
+        final TextView pVille = (TextView) v.findViewById(R.id.editTextVille);
+        final TextView pWild = (TextView) v.findViewById(R.id.editTextWild);
 
-        ProfileAdapter mProfileAdapter = new ProfileAdapter(myRef, MyProfilFragment.this.getActivity(), R.layout.fragment_screen_slide_page);
-
-
-        */
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+        mRef = database.child("Info");
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String uId = user.getUid();
 
 
 
 
+
+        // Attach a listener to read the data at our profile reference
+       mRef.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+
+
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+
+
+                    ProfilModel userProfile = postSnapshot.getValue(ProfilModel.class);
+
+                    pName.setText(userProfile.getName());
+                    pVille.setText(userProfile.getCity());
+                    pWild.setText(userProfile.getWild());
+                    pTechno.setText(userProfile.getTechno());
+                    pAge.setText(String.valueOf(userProfile.getAge()));
+
+
+
+
+                }
+
+
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+                Toast.makeText(MyProfilFragment.this.getContext(), "Your Database is fucked up m8 ! ",Toast.LENGTH_LONG )
+                        .show();            }
+        });
 
 
         v.findViewById(R.id.SignOutButton).setOnClickListener(this);
         return v;
+
+
+
     }
+
     private void signOut() {
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         mAuth.signOut();
@@ -72,14 +118,49 @@ public class MyProfilFragment extends Fragment implements View.OnClickListener {
         return fProfil;
     }
 
+
+
+
     @Override
     public void onClick(View v) {
         int i = v.getId();
-        if(i == R.id.SignOutButton){
+        if (i == R.id.SignOutButton) {
             signOut();
-            startActivity(new Intent(MyProfilFragment.this.getContext() , LoginActivity.class));
+            startActivity(new Intent(MyProfilFragment.this.getContext(), LoginActivity.class));
 
         }
+
+    }
+
+    @Override
+    public void onChildAdded(DataSnapshot dataSnapshot, String s) {
+        ProfilModel userProfile = dataSnapshot.getValue(ProfilModel.class);
+        pAge.setText(userProfile.getAge());
+        pName.setText(userProfile.getName());
+        pVille.setText(userProfile.getCity());
+        pWild.setText(userProfile.getWild());
+        pTechno.setText(userProfile.getTechno());
+
+
+    }
+
+    @Override
+    public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+
+    }
+
+    @Override
+    public void onChildRemoved(DataSnapshot dataSnapshot) {
+
+    }
+
+    @Override
+    public void onChildMoved(DataSnapshot dataSnapshot, String s) {
+
+    }
+
+    @Override
+    public void onCancelled(DatabaseError databaseError) {
 
     }
 }
