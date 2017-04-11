@@ -15,8 +15,11 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class CreateProfilActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -32,6 +35,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
     private int Toastduration;
     private Context context;
     private ImageView imageViewProfil;
+    DatabaseReference mRef;
 
 
     private FirebaseAuth mAuth;
@@ -57,14 +61,46 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
         context = getApplicationContext();
         Toastduration = Toast.LENGTH_SHORT;
         imageViewProfil = (ImageView) findViewById(R.id.PhotoProfil);
+        mAuth = FirebaseAuth.getInstance();
+
 
         mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+
+
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
+                    final String userId = user.getUid();
+                    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
+                    mRef = database.child("users/" +userId);
+                    mRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                        @Override
+                        public void onDataChange(DataSnapshot snapshot) {
+                            for (DataSnapshot postSnapshot : snapshot.getChildren()) {
+
+
+                                ProfilModel userProfile = postSnapshot.getValue(ProfilModel.class);
+
+                                String checkIfUserHasProfile = userProfile.getUserId();
+
+
+
+                            if (userId.equals(checkIfUserHasProfile)) {
+                                startActivity(new Intent(CreateProfilActivity.this, ScreenSlideActivity.class));
+                                CreateProfilActivity.this.finish();
+                            }}
+                        }
+
+                        @Override
+                        public void onCancelled(DatabaseError databaseError) {
+
+                        }
+                    });
                 }
+
+
             }
         });
 
@@ -87,29 +123,33 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                 String wild = editTextWild.getText().toString();
                 String city = editTextVille.getText().toString();
 
-                if (TextUtils.isEmpty(String.valueOf(age)) && editTextAge.length() == 0 ) {
+                if (TextUtils.isEmpty(String.valueOf(age)) && editTextAge.length() == 0 && "".equals(age)) {
                     editTextAge.setError("Required");
+                    return;
                 }
-                if (TextUtils.isEmpty(city)) {
+                if (TextUtils.isEmpty(city) && editTextVille.length() == 0 && "".equals(city)) {
                     editTextVille.setError("Required");
+                    return;
                 }
-                if (TextUtils.isEmpty(techno)) {
+                if (TextUtils.isEmpty(techno) && editTextTechno.length() == 0 && "".equals(techno)) {
                     editTextTechno.setError("Required");
+                    return;
                 }
-                if (TextUtils.isEmpty(name)) {
+                if (TextUtils.isEmpty(name) && editTextName.length() == 0 && "".equals(name)) {
                     editTextName.setError("Required");
+                    return;
                 }
-                if (TextUtils.isEmpty(wild)) {
+                if (TextUtils.isEmpty(wild) && editTextWild.length() == 0 && "".equals(wild)) {
                     editTextWild.setError("Required");
+                    return;
                 } else {
 
                     // Envoi sur la Database
 
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
-                    DatabaseReference myRef = database.getReference(userId);
+                    DatabaseReference mRef = database.getReference("users");
                     database = FirebaseDatabase.getInstance(); //APPELLE LA BASE DE DONNEES
-                    refProfil = database.getReference(userId);
-
+                    refProfil = database.getReference("users/" + userId);
 
 
                     ProfilModel userProfile = new ProfilModel(name, age, techno, wild, city, userId);
@@ -118,9 +158,6 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                     startActivity(new Intent(CreateProfilActivity.this, ProfilWelcome.class));
                     finish();
                 }
-
-
-
 
 
             } catch (NumberFormatException e) {
@@ -148,11 +185,6 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                 AlertDialog alertDialog = a1.create();
                 a1.show();
             }
-
-
-
-
-
 
 
         }

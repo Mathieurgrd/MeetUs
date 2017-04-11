@@ -56,15 +56,11 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-        mRef = database.child(userId);
-
-
-
-
+        mRef = database.child("users/" + userId);
 
 
         // Attach a listener to read the data at our profile reference
-       mRef.addValueEventListener(new ValueEventListener() {
+        mRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
 
@@ -81,24 +77,21 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
                     pAge.setText(String.valueOf(userProfile.getAge()));
 
 
-
-
                 }
-
 
 
             }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(MyProfilFragment.this.getContext(), "Your Database is fucked up m8 ! ",Toast.LENGTH_LONG )
-                        .show();            }
+                Toast.makeText(MyProfilFragment.this.getContext(), "Your Database is fucked up m8 ! ", Toast.LENGTH_LONG)
+                        .show();
+            }
         });
 
 
         v.findViewById(R.id.SignOutButton).setOnClickListener(this);
         return v;
-
 
 
     }
@@ -120,8 +113,6 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
     }
 
 
-
-
     @Override
     public void onClick(View v) {
         int i = v.getId();
@@ -131,7 +122,7 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
             this.getActivity().finish();
 
         }
-        if (i == R.id.buttonEditProfil){
+        if (i == R.id.buttonEditProfil) {
             startActivity(new Intent(MyProfilFragment.this.getContext(), CreateProfilActivity.class));
             this.getActivity().finish();
         }

@@ -34,7 +34,7 @@ public class ProfilWelcome extends AppCompatActivity implements View.OnClickList
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-        mRef = database.child(userId);
+        mRef = database.child("users/" + userId);
 
 
         String uId = user.getUid();
