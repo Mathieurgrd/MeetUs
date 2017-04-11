@@ -53,10 +53,11 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
         final TextView pVille = (TextView) v.findViewById(R.id.editTextVille);
         final TextView pWild = (TextView) v.findViewById(R.id.editTextWild);
 
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-        mRef = database.child("Info");
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String uId = user.getUid();
+        String userId = user.getUid();
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+        mRef = database.child(userId);
+
 
 
 

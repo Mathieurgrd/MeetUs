@@ -31,10 +31,11 @@ public class ProfilWelcome extends AppCompatActivity implements View.OnClickList
         final TextView userName = (TextView) findViewById(R.id.UserName);
         ImageView photoProfil = (ImageView) findViewById(R.id.ivPhotoProfil);
 
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-        mRef = database.child("Info");
-
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userId = user.getUid();
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+        mRef = database.child(userId);
+
 
         String uId = user.getUid();
 

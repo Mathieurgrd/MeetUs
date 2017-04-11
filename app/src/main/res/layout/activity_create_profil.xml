@@ -36,7 +36,7 @@
         android:layout_height="70dp"
         android:inputType="number"
         android:background="@drawable/text_d"
-        android:hint="Age"
+        android:hint="@string/age"
         android:ems="10"
         android:id="@+id/editTextAge"
         android:gravity="center_vertical|center"
