@@ -3,7 +3,10 @@ package com.example.mathieu.meetus;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -36,8 +39,10 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
     private Context context;
     private ImageView imageViewProfil;
     DatabaseReference mRef;
+    final static int cameraData = 0;
+    Bitmap bmp;
 
-
+    private static final int RESULT_LOAD_IMAGE = 1;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
 
@@ -74,20 +79,20 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
                     final String userId = user.getUid();
                     DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
-                    mRef = database.child("users/" +userId);
+                    mRef = database.child("users/" + userId);
                     mRef.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot snapshot) {
 
-                                ProfilModel userProfile = snapshot.getValue(ProfilModel.class);
+                            ProfilModel userProfile = snapshot.getValue(ProfilModel.class);
 
-                                editTextName.setHint(userProfile.getName());
-                                editTextVille.setHint(userProfile.getCity());
-                                editTextWild.setHint(userProfile.getWild());
-                                editTextTechno.setHint(userProfile.getTechno());
-                                editTextAge.setHint(String.valueOf(userProfile.getAge()));
+                            editTextName.setHint(userProfile.getName());
+                            editTextVille.setHint(userProfile.getCity());
+                            editTextWild.setHint(userProfile.getWild());
+                            editTextTechno.setHint(userProfile.getTechno());
+                            editTextAge.setHint(String.valueOf(userProfile.getAge()));
 
-                            }
+                        }
 
 
                         @Override
@@ -108,6 +113,49 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.buttonAddYourPhoto) {
+
+            AlertDialog.Builder a1 = new AlertDialog.Builder(ModifyProfilUser.this);
+
+
+            // Setting Dialog Title
+            a1.setTitle("Choose an option");
+
+            // Setting Dialog Message
+            a1.setMessage("Choose whether your prefer upload a photo by taking a picture with the camera , or uploading an existing from the gallery");
+
+            a1.setPositiveButton("Take a new one",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog,
+                                            int button1) {
+                            // if this button is clicked, close
+                            // current activity
+                            Intent cameraIntent = new Intent(android.provider.MediaStore.ACTION_IMAGE_CAPTURE);
+                            startActivityForResult(cameraIntent, cameraData);
+
+                            dialog.cancel();
+                        }
+
+
+
+                    });
+            a1.setNeutralButton("From Gallery",
+                    new DialogInterface.OnClickListener() {
+
+                        @Override
+                        public void onClick(DialogInterface dialog, int button2) {
+
+                            Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                            startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
+                            dialog.cancel();
+
+                        }
+                    });
+
+            // Showing Alert Message
+            AlertDialog alertDialog = a1.create();
+            a1.show();
+
+
         }
         if (i == R.id.buttonProfil) {
 
@@ -188,6 +236,29 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
         }
 
     }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        // TODO Auto-generated method stub
+        super.onActivityResult(requestCode, resultCode, data);
+        if (resultCode == RESULT_OK) {
+            Bundle extras = data.getExtras();
+            bmp = (Bitmap) extras.get("data");
+            imageViewProfil.setImageBitmap(bmp);
+        }
+
+        else if (requestCode == RESULT_LOAD_IMAGE && requestCode == RESULT_OK && data != null){
+            Uri selectedImage = data.getData();
+            imageViewProfil.setImageURI(selectedImage);
+        }
+    }
+
+
+
+
+
+
 }
 
 

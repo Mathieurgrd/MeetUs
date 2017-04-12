@@ -3,7 +3,10 @@ package com.example.mathieu.meetus;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -37,6 +40,10 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
     private ImageView imageViewProfil;
     DatabaseReference mRef;
     String userId;
+    final static int cameraData=0;
+    Bitmap bmp;
+
+    public final static int RESULT_LOAD_IMAGE = 1;
 
 
     private FirebaseAuth mAuth;
@@ -112,13 +119,26 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
             }
         });
 
+
     }
+
+    @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            super.onActivityResult(requestCode, resultCode, data);
+            if (requestCode == RESULT_LOAD_IMAGE && requestCode == RESULT_OK && data != null){
+                Uri selectedImage = data.getData();
+                imageViewProfil.setImageURI(selectedImage);
+            }
+        }
 
 
     @Override
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.buttonAddYourPhoto) {
+                    Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+                    startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
+
         }
         if (i == R.id.buttonProfil) {
 
