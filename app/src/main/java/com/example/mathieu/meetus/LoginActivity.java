@@ -30,7 +30,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         super.onCreate(savedInstanceState);
 
 
-
         // set the view now
         setContentView(R.layout.activity_login);
 
@@ -47,10 +46,20 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-//                    LoginActivity.this.finish();
+                    signOut();
+
+                    //startActivity(new Intent(LoginActivity.this, ScreenSlideActivity.class));
+                    // LoginActivity.this.finish();
+                } else{
+                    return;
                 }
             }
         });
+    }
+
+    private void signOut() {
+        FirebaseAuth mAuth = FirebaseAuth.getInstance();
+        mAuth.signOut();
     }
 
     private boolean validateForm() {
@@ -98,9 +107,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             Log.w(TAG, "signInWithEmail:failed", task.getException());
                             Toast.makeText(LoginActivity.this, R.string.auth_failed,
                                     Toast.LENGTH_SHORT).show();
-                        }
-
-                        else { // if success
+                        } else { // if success
                             startActivity(new Intent(getApplicationContext(), CreateProfilActivity.class));
                         }
 
@@ -110,7 +117,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 });
         // [END sign_in_with_em
     }
-
 
 
     @Override
