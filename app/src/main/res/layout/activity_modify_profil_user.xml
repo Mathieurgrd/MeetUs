@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_create_profil"
+    android:background="#ffffff"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:fillViewport="true"
+    android:scrollbars = "vertical"
+    android:scrollbarStyle="insideInset"
+    tools:context="com.example.mathieu.meetus.CreateProfilActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/text_d"
+            android:hint="Techno (Java, PHP, C/C++ ...)"
+            android:ems="10"
+            android:id="@+id/editTextTechno"
+            android:gravity="center_vertical|center"
+            android:layout_below="@+id/editTextAge"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="36dp" />
+
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:inputType="number"
+            android:background="@drawable/text_d"
+            android:hint="@string/age"
+            android:ems="10"
+            android:id="@+id/editTextAge"
+            android:gravity="center_vertical|center"
+            android:layout_below="@+id/editTextName"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="48dp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/photo"
+            android:id="@+id/PhotoProfil"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:inputType="textPersonName"
+            android:hint="Ville"
+            android:background="@drawable/text_d"
+            android:ems="10"
+            android:id="@+id/editTextVille"
+            android:gravity="center_vertical|center"
+            android:layout_below="@+id/editTextWild"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="38dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/text_d"
+            android:hint="Côté Wild"
+            android:ems="10"
+            android:id="@+id/editTextWild"
+            android:gravity="center_vertical|center"
+            android:layout_below="@+id/editTextTechno"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="33dp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="70dp"
+            android:inputType="textPersonName"
+            android:background="@drawable/text_d"
+            android:hint="Name"
+            android:ems="10"
+            android:layout_marginTop="139dp"
+            android:id="@+id/editTextName"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_below="@+id/PhotoProfil"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:hint="Edit my profil"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/start"
+            android:id="@+id/buttonProfil"
+            android:layout_marginTop="41dp"
+            android:layout_below="@+id/editTextVille"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/buttonAddYourPhoto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttonguess"
+            android:backgroundTint="#E9B532"
+            android:layout_below="@+id/PhotoProfil"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="29dp"
+            android:text="@string/show_me_your_wild_face" />
+
+    </RelativeLayout>
+</ScrollView>

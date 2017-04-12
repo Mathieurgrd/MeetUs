@@ -174,9 +174,14 @@
     <string name="title_activity_screen_slide">ScreenSlideActivity</string>
     <string name="section_label">Ca Marche !!!!</string>7
     <string name="TutorialMeetUs">Welcome on MeetUs ! MeetUs is a brain new application that aim for developpers interaction and dialog, using funny games !
-    Blabla  BlablaBlabla BlablaBlablaBlabla BlablaBlablaBlablaBlablaBlabla  BlablaBlabla BlablaBlabla Blabla
-    BlablaBlablaBlablaBlablaBlablaBlablavvBlablaBlablaBlablaBlablaBlablaBlablaBlabla
-    BlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlablaBlabla</string>
+     First of all, check other user Profile by swiping on the right of this page, and see who they are, learn what they do !
+    When you\'re ready, swipe again and play Guess. You\'ll be given infos about a random Wilder, and you will see a blurred photo. At the bottom of the page,
+    try to guess who he/she is by typing his name. The closest you answer, the focused will be the picture ! You got\'t five try  ! At the  end you\ll be given a note on how much you know the people you have been guessing about!
+
+    Have fun !
+
+
+    Credits : Mathieu, Marine, Sarah, your MeetUs Team ! </string>
     <string name="title_activity_profil_welcome">ProfilWelcome</string>
     <string name="toastCreateProfil">\"Les Toast c\'est bon\"</string>
     <string name="title_activity_sign_up">SignUpActivity</string>

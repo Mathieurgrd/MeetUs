@@ -49,10 +49,8 @@ public class ProfilWelcome extends AppCompatActivity implements View.OnClickList
             public void onDataChange(DataSnapshot dataSnapshot) {
 
 
-                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
 
-
-                    ProfilModel userProfile = postSnapshot.getValue(ProfilModel.class);
+                    ProfilModel userProfile = dataSnapshot.getValue(ProfilModel.class);
 
                     final String userNameString = String.format(" %s !" , userProfile.getName() );
                     userName.setText(getString(R.string.welcomeprofilstring) + userNameString);
@@ -63,7 +61,7 @@ public class ProfilWelcome extends AppCompatActivity implements View.OnClickList
 
 
 
-                }
+
 
 
 

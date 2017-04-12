@@ -65,10 +65,8 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
             public void onDataChange(DataSnapshot dataSnapshot) {
 
 
-                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
 
-
-                    ProfilModel userProfile = postSnapshot.getValue(ProfilModel.class);
+                    ProfilModel userProfile = dataSnapshot.getValue(ProfilModel.class);
 
                     pName.setText(userProfile.getName());
                     pVille.setText(userProfile.getCity());
@@ -79,8 +77,6 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
 
                 }
 
-
-            }
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
@@ -123,7 +119,7 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
 
         }
         if (i == R.id.buttonEditProfil) {
-            startActivity(new Intent(MyProfilFragment.this.getContext(), CreateProfilActivity.class));
+            startActivity(new Intent(MyProfilFragment.this.getContext(), ModifyProfilUser.class));
             this.getActivity().finish();
         }
 

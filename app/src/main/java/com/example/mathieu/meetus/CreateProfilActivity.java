@@ -78,19 +78,15 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                     mRef.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot snapshot) {
-                            for (DataSnapshot postSnapshot : snapshot.getChildren()) {
-
-
-                                ProfilModel userProfile = postSnapshot.getValue(ProfilModel.class);
-
-                                String checkIfUserHasProfile = userProfile.getUserId();
+                            ProfilModel userProfile = snapshot.getValue(ProfilModel.class);
+                            String checkIfUserHasProfile = userProfile.getUserId();
 
 
 
                             if (userId.equals(checkIfUserHasProfile)) {
                                 startActivity(new Intent(CreateProfilActivity.this, ScreenSlideActivity.class));
                                 CreateProfilActivity.this.finish();
-                            }}
+                            }
                         }
 
                         @Override

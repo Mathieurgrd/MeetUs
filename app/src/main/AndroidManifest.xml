@@ -20,7 +20,8 @@
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter></activity>
+            </intent-filter>
+        </activity>
         <activity android:name=".LoginActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -41,14 +42,12 @@
             android:name=".ProfilWelcome"
             android:label="@string/title_activity_profil_welcome" />
         <activity android:name=".CreateProfilActivity" />
-
         <activity
             android:name=".SignUpActivity"
             android:label="@string/title_activity_sign_up" />
-
         <activity android:name=".ResetPasswordActivity" />
-
         <activity android:name=".ScoreResultsActivity" />
+        <activity android:name=".ModifyProfilUser"></activity>
     </application>
 
 </manifest>
