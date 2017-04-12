@@ -12,6 +12,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/mathieu/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_5a66db8fe0fd2957923cf1a8a6a6e99960dd766a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"

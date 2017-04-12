@@ -36,6 +36,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
     private Context context;
     private ImageView imageViewProfil;
     DatabaseReference mRef;
+    String userId;
 
 
     private FirebaseAuth mAuth;
@@ -61,32 +62,43 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
         context = getApplicationContext();
         Toastduration = Toast.LENGTH_SHORT;
         imageViewProfil = (ImageView) findViewById(R.id.PhotoProfil);
+
         mAuth = FirebaseAuth.getInstance();
+
 
 
         mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
-
                 FirebaseUser user = firebaseAuth.getCurrentUser();
+
                 if (user != null) {
+
                     final String userId = user.getUid();
+
                     DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
                     mRef = database.child("users/" +userId);
+
                     mRef.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(DataSnapshot snapshot) {
-                            ProfilModel userProfile = snapshot.getValue(ProfilModel.class);
-                            String checkIfUserHasProfile = userProfile.getUserId();
+                            if (snapshot.hasChild("userId")) {
 
 
+                                ProfilModel userProfile = snapshot.getValue(ProfilModel.class);
+                                String checkIfUserHasProfile = userProfile.getUserId();
 
-                            if (userId.equals(checkIfUserHasProfile)) {
-                                startActivity(new Intent(CreateProfilActivity.this, ScreenSlideActivity.class));
-                                CreateProfilActivity.this.finish();
+
+                                if (userId.equals(checkIfUserHasProfile)) {
+                                    startActivity(new Intent(CreateProfilActivity.this, ScreenSlideActivity.class));
+                                    CreateProfilActivity.this.finish();
+                                }
+                            } else{
+                                    Toast.makeText(getApplicationContext(), "You don't have a profile", Toast.LENGTH_LONG).show();
                             }
+
                         }
 
                         @Override
@@ -110,9 +122,12 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
         }
         if (i == R.id.buttonProfil) {
 
+
+
+
             try {
-                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                String userId = user.getUid();
+
+                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 String name = editTextName.getText().toString();
                 int age = Integer.parseInt(editTextAge.getText().toString());
                 String techno = editTextTechno.getText().toString();
@@ -150,6 +165,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
 
                     ProfilModel userProfile = new ProfilModel(name, age, techno, wild, city, userId);
                     refProfil.push().setValue(userProfile);
+                    refProfil.setValue(userProfile);
 
                     startActivity(new Intent(CreateProfilActivity.this, ProfilWelcome.class));
                     finish();

@@ -141,6 +141,7 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
                     return;
                 } else {
 
+
                     // Envoi sur la Database
 
                     FirebaseDatabase database = FirebaseDatabase.getInstance();

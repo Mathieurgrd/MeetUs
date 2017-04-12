@@ -37,8 +37,6 @@ public class ProfilWelcome extends AppCompatActivity implements View.OnClickList
         mRef = database.child("users/" + userId);
 
 
-        String uId = user.getUid();
-
 
 
 

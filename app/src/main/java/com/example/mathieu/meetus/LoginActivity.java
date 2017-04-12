@@ -41,15 +41,18 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         //Get Firebase auth instance
         mAuth = FirebaseAuth.getInstance();
 
+
+        FirebaseUser user = mAuth.getCurrentUser();
+        if (user != null){signOut();}
+
         mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    signOut();
 
                     //startActivity(new Intent(LoginActivity.this, ScreenSlideActivity.class));
-                    // LoginActivity.this.finish();
+                    //LoginActivity.this.finish();
                 } else{
                     return;
                 }
