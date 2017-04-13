@@ -3,15 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_88780dede1e7a4a831d635a31c920cfac25f0ef0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/mathieu/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
         jumboMode="true"
         optimize="true"
@@ -21,11 +12,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
+        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_88780dede1e7a4a831d635a31c920cfac25f0ef0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="65b98701d37d43794460c8e6059ff640eb73fc33">
+        sha1="7939987d3e3e50b85441d13eaf46a89a989e8f1e">
         <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d47edf1a3f1fbd3e3e6bbf00ff796480bdc43244/classes.dex" />
     </item>
 

@@ -1,6 +1,7 @@
 package com.example.mathieu.meetus;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +11,7 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,12 +31,26 @@ public class ProfilWelcome extends AppCompatActivity implements View.OnClickList
         findViewById(R.id.buttonnext).setOnClickListener(this);
 
         final TextView userName = (TextView) findViewById(R.id.UserName);
-        ImageView photoProfil = (ImageView) findViewById(R.id.ivPhotoProfil);
+        final ImageView photoProfil = (ImageView) findViewById(R.id.ivPhotoProfil);
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         mRef = database.child("users/" + userId);
+
+        if (user != null) {
+
+            for (UserInfo profile : user.getProviderData()){
+
+                Uri PhotoProfil = profile.getPhotoUrl();
+                photoProfil.setImageURI(PhotoProfil);
+
+
+
+            } }else{
+            Toast.makeText(ProfilWelcome.this, "Vous n'avez pas de photo profil", Toast.LENGTH_LONG).show();
+        }
+
 
 
 

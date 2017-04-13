@@ -36,13 +36,10 @@
             android:hint="Age"
             android:inputType="textPersonName" />
 
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        <ImageView xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/PhotoProfil"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:src="@drawable/imgmarineprofil"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp"
             android:layout_below="@+id/polnaref"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="15dp" />

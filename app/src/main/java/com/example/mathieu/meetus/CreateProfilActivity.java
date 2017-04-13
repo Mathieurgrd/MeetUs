@@ -3,7 +3,11 @@ package com.example.mathieu.meetus;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.database.Cursor;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
@@ -23,6 +27,9 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import java.io.File;
+import java.io.IOException;
 
 public class CreateProfilActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -121,33 +128,56 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
 
 
     }
-
-    @Override
-        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-            super.onActivityResult(requestCode, resultCode, data);
-            if (requestCode == RESULT_LOAD_IMAGE && requestCode == RESULT_OK && data != null){
-                Uri selectedImage = data.getData();
-                imageViewProfil.setImageURI(selectedImage);
-            }
-        }
-
-
     @Override
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.buttonAddYourPhoto) {
-                    Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
-                    startActivityForResult(galleryIntent, RESULT_LOAD_IMAGE);
+
+            AlertDialog.Builder a1 = new AlertDialog.Builder(CreateProfilActivity.this);
+
+
+            // Setting Dialog Title
+            a1.setTitle("Choose an option");
+
+            // Setting Dialog Message
+            a1.setMessage("Choose whether your prefer upload a photo by taking a picture with the camera , or uploading an existing from the gallery");
+
+            a1.setPositiveButton("Take a new one",
+                    new DialogInterface.OnClickListener() {
+                        public void onClick(DialogInterface dialog,
+                                            int button1) {
+                            // if this button is clicked, close
+                            // current activity
+                            Intent takePicture = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                            startActivityForResult(takePicture, 0);//zero can be replaced with any action code
+
+                            dialog.cancel();
+                        }
+
+
+                    });
+            a1.setNeutralButton("From Gallery",
+                    new DialogInterface.OnClickListener() {
+
+                        @Override
+                        public void onClick(DialogInterface dialog, int button2) {
+                            openGallery();
+                            dialog.cancel();
+
+                        }
+                    });
+
+            // Showing Alert Message
+            AlertDialog alertDialog = a1.create();
+            a1.show();
+
 
         }
         if (i == R.id.buttonProfil) {
 
-
-
-
             try {
-
-                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String userId = user.getUid();
                 String name = editTextName.getText().toString();
                 int age = Integer.parseInt(editTextAge.getText().toString());
                 String techno = editTextTechno.getText().toString();
@@ -175,6 +205,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                     return;
                 } else {
 
+
                     // Envoi sur la Database
 
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -184,7 +215,6 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
 
 
                     ProfilModel userProfile = new ProfilModel(name, age, techno, wild, city, userId);
-                    refProfil.push().setValue(userProfile);
                     refProfil.setValue(userProfile);
 
                     startActivity(new Intent(CreateProfilActivity.this, ProfilWelcome.class));
@@ -221,6 +251,79 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
 
         }
 
+    }
+
+
+    private void openGallery() {
+        Intent pickPhoto = new Intent(Intent.ACTION_PICK,
+                android.provider.MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+        startActivityForResult(pickPhoto, 1);//
+    }
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
+        super.onActivityResult(requestCode, resultCode, imageReturnedIntent);
+        switch (requestCode) {
+            case 0:
+                if (resultCode == RESULT_OK) {
+                    Uri selectedImage = imageReturnedIntent.getData();
+                    imageViewProfil.setImageURI(selectedImage);
+                }
+
+                break;
+            case 1:
+                if (resultCode == RESULT_OK) {
+                    Uri selectedImage = imageReturnedIntent.getData();
+                    imageViewProfil.setImageURI(selectedImage);
+
+
+                    // Get and resize profile image
+                    String[] filePathColumn = {MediaStore.Images.Media.DATA};
+                    Cursor cursor = CreateProfilActivity.this.getContentResolver().query(selectedImage, filePathColumn, null, null, null);
+                    cursor.moveToFirst();
+
+                    int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
+                    String picturePath = cursor.getString(columnIndex);
+                    cursor.close();
+
+                    Bitmap loadedBitmap = BitmapFactory.decodeFile(picturePath);
+
+                    ExifInterface exif = null;
+                    try {
+                        File pictureFile = new File(picturePath);
+                        exif = new ExifInterface(pictureFile.getAbsolutePath());
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    int orientation = ExifInterface.ORIENTATION_NORMAL;
+
+                    if (exif != null)
+                        orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
+
+                    switch (orientation) {
+                        case ExifInterface.ORIENTATION_ROTATE_90:
+                            loadedBitmap = rotate(loadedBitmap, 90);
+                            break;
+                        case ExifInterface.ORIENTATION_ROTATE_180:
+                            loadedBitmap = rotate(loadedBitmap, 180);
+                            break;
+
+                        case ExifInterface.ORIENTATION_ROTATE_270:
+                            loadedBitmap = rotate(loadedBitmap, 270);
+                            break;
+                    }
+
+                }
+        }
+    }
+
+
+    public static Bitmap rotate(Bitmap bitmap, float degrees) {
+        Matrix matrix = new Matrix();
+        matrix.postRotate(degrees);
+        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
     }
 }
 
