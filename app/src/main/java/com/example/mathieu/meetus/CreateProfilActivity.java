@@ -20,6 +20,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
@@ -27,6 +29,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.OnPausedListener;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
+import com.squareup.picasso.Picasso;
 
 import java.io.File;
 import java.io.IOException;
@@ -47,8 +54,9 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
     private ImageView imageViewProfil;
     DatabaseReference mRef;
     String userId;
-    final static int cameraData=0;
+    final static int cameraData = 0;
     Bitmap bmp;
+    private StorageReference mPhotoStorage;
 
     public final static int RESULT_LOAD_IMAGE = 1;
 
@@ -80,7 +88,6 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
         mAuth = FirebaseAuth.getInstance();
 
 
-
         mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -93,7 +100,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
 
                     DatabaseReference database = FirebaseDatabase.getInstance().getReference();
 
-                    mRef = database.child("users/" +userId);
+                    mRef = database.child("users/" + userId);
 
                     mRef.addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
@@ -109,8 +116,8 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                                     startActivity(new Intent(CreateProfilActivity.this, ScreenSlideActivity.class));
                                     CreateProfilActivity.this.finish();
                                 }
-                            } else{
-                                    Toast.makeText(getApplicationContext(), "You don't have a profile", Toast.LENGTH_LONG).show();
+                            } else {
+                                Toast.makeText(getApplicationContext(), "You don't have a profile", Toast.LENGTH_LONG).show();
                             }
 
                         }
@@ -128,6 +135,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
 
 
     }
+
     @Override
     public void onClick(View v) {
         int i = v.getId();
@@ -260,6 +268,55 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
         startActivityForResult(pickPhoto, 1);//
     }
 
+    private void uploadPhoto(Uri imageUri) {
+
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userId = user.getUid();
+
+        StorageReference photoRef = mPhotoStorage.child("userPics/" + userId);
+
+        photoRef.putFile(imageUri)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // Get a URL to the uploaded content
+                        @SuppressWarnings("VisibleForTests") Uri downloadUrl = taskSnapshot.getDownloadUrl();
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        // Handle unsuccessful uploads
+                        // ...
+                    }
+                }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                @SuppressWarnings("VisibleForTests") double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+                System.out.println("Upload is " + progress + "% done");
+            }
+        }).addOnPausedListener(new OnPausedListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onPaused(UploadTask.TaskSnapshot taskSnapshot) {
+                System.out.println("Upload is paused");
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // Handle unsuccessful uploads
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                // Handle successful uploads on complete
+                @SuppressWarnings("VisibleForTests") Uri downloadUrl = taskSnapshot.getMetadata().getDownloadUrl();
+            }
+        });
+
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
@@ -269,6 +326,17 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                 if (resultCode == RESULT_OK) {
                     Uri selectedImage = imageReturnedIntent.getData();
                     imageViewProfil.setImageURI(selectedImage);
+                    if (selectedImage != null) {
+                        Picasso.with(getApplicationContext())
+                                .load(selectedImage)
+                                .placeholder(R.drawable.flou)
+                                .resize(400, 400)
+                                .centerCrop()
+                                .into(imageViewProfil);
+
+
+                        uploadPhoto(selectedImage);
+                    }
                 }
 
                 break;
@@ -276,6 +344,18 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                 if (resultCode == RESULT_OK) {
                     Uri selectedImage = imageReturnedIntent.getData();
                     imageViewProfil.setImageURI(selectedImage);
+
+                    if (selectedImage != null) {
+                        Picasso.with(getApplicationContext())
+                                .load(selectedImage)
+                                .placeholder(R.drawable.flou)
+                                .resize(400, 400)
+                                .centerCrop()
+                                .into(imageViewProfil);
+
+
+                        uploadPhoto(selectedImage);
+                    }
 
 
                     // Get and resize profile image

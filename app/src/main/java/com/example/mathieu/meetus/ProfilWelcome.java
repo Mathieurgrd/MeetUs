@@ -1,7 +1,6 @@
 package com.example.mathieu.meetus;
 
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,19 +8,23 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.firebase.ui.storage.images.FirebaseImageLoader;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.UserInfo;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
 
 public class ProfilWelcome extends AppCompatActivity implements View.OnClickListener {
 
 
     DatabaseReference mRef;
+    StorageReference mPhotoStorage;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,21 +36,24 @@ public class ProfilWelcome extends AppCompatActivity implements View.OnClickList
         final TextView userName = (TextView) findViewById(R.id.UserName);
         final ImageView photoProfil = (ImageView) findViewById(R.id.ivPhotoProfil);
 
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
+        mPhotoStorage = FirebaseStorage.getInstance().getReference();
+        StorageReference photoRef = mPhotoStorage.child("userPics/" + userId);
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         mRef = database.child("users/" + userId);
 
-        if (user != null) {
+            if (user != null) {
 
-            for (UserInfo profile : user.getProviderData()){
+// Load the image using Glide
+                Glide.with(ProfilWelcome.this)
+                        .using(new FirebaseImageLoader())
+                        .load(photoRef)
+                        .into(photoProfil);
 
-                Uri PhotoProfil = profile.getPhotoUrl();
-                photoProfil.setImageURI(PhotoProfil);
-
-
-
-            } }else{
+            }
+        else{
             Toast.makeText(ProfilWelcome.this, "Vous n'avez pas de photo profil", Toast.LENGTH_LONG).show();
         }
 

@@ -22,6 +22,8 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -31,6 +33,11 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.OnPausedListener;
+import com.google.firebase.storage.OnProgressListener;
+import com.google.firebase.storage.StorageReference;
+import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.io.File;
@@ -40,18 +47,25 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
 
 
     private static final String TAG = "TAG";
+
     private EditText editTextName;
     private EditText editTextAge;
     private EditText editTextTechno;
     private EditText editTextWild;
     private EditText editTextVille;
+
     private Toast toast;
-    private FirebaseDatabase database;
-    private DatabaseReference refProfil;
     private int Toastduration;
     private Context context;
-    private ImageView imageViewProfil;
+
+    private FirebaseDatabase database;
+    private DatabaseReference refProfil;
     DatabaseReference mRef;
+    private StorageReference mPhotoStorage;
+
+
+    private ImageView imageViewProfil;
+
     final static int cameraData = 0;
     Bitmap bmp;
 
@@ -80,6 +94,7 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
         Toastduration = Toast.LENGTH_SHORT;
         imageViewProfil = (ImageView) findViewById(R.id.PhotoProfil);
         mAuth = FirebaseAuth.getInstance();
+        mPhotoStorage = FirebaseStorage.getInstance().getReference();
 
 
         mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
@@ -255,6 +270,55 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
         startActivityForResult(pickPhoto, 1);//
     }
 
+    private void uploadPhoto(Uri imageUri) {
+
+
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        String userId = user.getUid();
+
+        StorageReference photoRef = mPhotoStorage.child("userPics/" + userId);
+
+        photoRef.putFile(imageUri)
+                .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                    @Override
+                    public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                        // Get a URL to the uploaded content
+                        @SuppressWarnings("VisibleForTests") Uri downloadUrl = taskSnapshot.getDownloadUrl();
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception exception) {
+                        // Handle unsuccessful uploads
+                        // ...
+                    }
+                }).addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onProgress(UploadTask.TaskSnapshot taskSnapshot) {
+                @SuppressWarnings("VisibleForTests") double progress = (100.0 * taskSnapshot.getBytesTransferred()) / taskSnapshot.getTotalByteCount();
+                System.out.println("Upload is " + progress + "% done");
+            }
+        }).addOnPausedListener(new OnPausedListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onPaused(UploadTask.TaskSnapshot taskSnapshot) {
+                System.out.println("Upload is paused");
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                // Handle unsuccessful uploads
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                // Handle successful uploads on complete
+                @SuppressWarnings("VisibleForTests") Uri downloadUrl = taskSnapshot.getMetadata().getDownloadUrl();
+            }
+        });
+
+    }
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent imageReturnedIntent) {
@@ -272,6 +336,8 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
                                 .resize(200, 200)
                                 .centerCrop()
                                 .into(imageViewProfil);
+
+                        uploadPhoto(selectedImage);
 
                     }
 
@@ -293,8 +359,8 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Log.d(TAG, "User profile updated.");
-                                    }else{
-                                        Toast.makeText(ModifyProfilUser.this ,"Echec du chargement de la photo de profil", Toast.LENGTH_LONG)
+                                    } else {
+                                        Toast.makeText(ModifyProfilUser.this, "Echec du chargement de la photo de profil", Toast.LENGTH_LONG)
                                                 .show();
                                     }
                                 }
@@ -314,6 +380,8 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
                                 .resize(200, 200)
                                 .centerCrop()
                                 .into(imageViewProfil);
+
+                        uploadPhoto(selectedImage);
 
                     }
 
@@ -370,8 +438,9 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
                                         Log.d(TAG, "User profile updated.");
-                                    }else{
-                                        Toast.makeText(ModifyProfilUser.this ,"Echec du chargement de la photo de profil", Toast.LENGTH_LONG)
+                                    } else {
+                                        Toast.makeText(ModifyProfilUser.this, "Echec du chargement de la photo de profil",
+                                                Toast.LENGTH_LONG)
                                                 .show();
                                     }
                                 }
