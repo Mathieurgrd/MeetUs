@@ -3,15 +3,13 @@ package com.example.mathieu.meetus;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Matrix;
-import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
+import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -21,6 +19,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.request.target.BitmapImageViewTarget;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -38,10 +38,6 @@ import com.google.firebase.storage.OnPausedListener;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
-import com.squareup.picasso.Picasso;
-
-import java.io.File;
-import java.io.IOException;
 
 public class ModifyProfilUser extends AppCompatActivity implements View.OnClickListener {
 
@@ -330,12 +326,23 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
                     imageViewProfil.setImageURI(selectedImage);
 
                     if (selectedImage != null) {
-                        Picasso.with(getApplicationContext())
+                      /**  Picasso.with(getApplicationContext())
                                 .load(selectedImage)
                                 .placeholder(R.drawable.flou)
                                 .resize(200, 200)
                                 .centerCrop()
-                                .into(imageViewProfil);
+                                .into(imageViewProfil);*/
+
+                        Glide.with(ModifyProfilUser.this).load(selectedImage).asBitmap().centerCrop()
+                                .into(new BitmapImageViewTarget(imageViewProfil) {
+                                    @Override
+                                    protected void setResource(Bitmap resource) {
+                                        RoundedBitmapDrawable circularBitmapDrawable =
+                                                RoundedBitmapDrawableFactory.create(ModifyProfilUser.this.getResources(), resource);
+                                        circularBitmapDrawable.setCircular(true);
+                                        imageViewProfil.setImageDrawable(circularBitmapDrawable);
+                                    }
+                                });
 
                         uploadPhoto(selectedImage);
 
@@ -374,54 +381,24 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
                     imageViewProfil.setImageURI(selectedImage);
 
                     if (selectedImage != null) {
-                        Picasso.with(getApplicationContext())
-                                .load(selectedImage)
-                                .placeholder(R.drawable.flou)
-                                .resize(200, 200)
-                                .centerCrop()
-                                .into(imageViewProfil);
+
+
+                        Glide.with(ModifyProfilUser.this).load(selectedImage).asBitmap().centerCrop()
+                                .into(new BitmapImageViewTarget(imageViewProfil) {
+                                    @Override
+                                    protected void setResource(Bitmap resource) {
+                                        RoundedBitmapDrawable circularBitmapDrawable =
+                                                RoundedBitmapDrawableFactory.create(ModifyProfilUser.this.getResources(), resource);
+                                        circularBitmapDrawable.setCircular(true);
+                                        imageViewProfil.setImageDrawable(circularBitmapDrawable);
+                                    }
+                                });
+
 
                         uploadPhoto(selectedImage);
 
                     }
 
-
-                    // Get and resize profile image
-                    String[] filePathColumn = {MediaStore.Images.Media.DATA};
-                    Cursor cursor = ModifyProfilUser.this.getContentResolver().query(selectedImage, filePathColumn, null, null, null);
-                    cursor.moveToFirst();
-
-                    int columnIndex = cursor.getColumnIndex(filePathColumn[0]);
-                    String picturePath = cursor.getString(columnIndex);
-                    cursor.close();
-
-                    Bitmap loadedBitmap = BitmapFactory.decodeFile(picturePath);
-
-                    ExifInterface exif = null;
-                    try {
-                        File pictureFile = new File(picturePath);
-                        exif = new ExifInterface(pictureFile.getAbsolutePath());
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-
-                    int orientation = ExifInterface.ORIENTATION_NORMAL;
-
-                    if (exif != null)
-                        orientation = exif.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_NORMAL);
-
-                    switch (orientation) {
-                        case ExifInterface.ORIENTATION_ROTATE_90:
-                            loadedBitmap = rotate(loadedBitmap, 90);
-                            break;
-                        case ExifInterface.ORIENTATION_ROTATE_180:
-                            loadedBitmap = rotate(loadedBitmap, 180);
-                            break;
-
-                        case ExifInterface.ORIENTATION_ROTATE_270:
-                            loadedBitmap = rotate(loadedBitmap, 270);
-                            break;
-                    }
 
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
 
@@ -451,10 +428,5 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
     }
 
 
-    public static Bitmap rotate(Bitmap bitmap, float degrees) {
-        Matrix matrix = new Matrix();
-        matrix.postRotate(degrees);
-        return Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
-    }
 
 }

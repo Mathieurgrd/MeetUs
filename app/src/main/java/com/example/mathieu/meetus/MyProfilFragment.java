@@ -11,7 +11,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.target.BitmapImageViewTarget;
@@ -26,8 +25,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
-
-import java.io.File;
 
 
 /**
@@ -47,7 +44,7 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
     public TextView pAge;
     public TextView pName;
     private StorageReference mPhotoStorage;
-    final File localFile = null;
+
 
 
     //ConstructeurPrivéVide
@@ -73,31 +70,28 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
         StorageReference photoRef = mPhotoStorage.child("userPics/" + userId);
         DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         mRef = database.child("users/" + userId);
-        final String TempFilePath = "meetusProfilPic" + userId+ "jpg" ;
 
 
-        if (user != null) {
+        ivphotoProfil.setImageDrawable(null);
 
-            Glide.with(MyProfilFragment.this.getContext()).using(new FirebaseImageLoader()).load(photoRef).asBitmap().centerCrop()
-                    .into(new BitmapImageViewTarget(ivphotoProfil) {
-                @Override
-                protected void setResource(Bitmap resource) {
-                    RoundedBitmapDrawable circularBitmapDrawable =
-                            RoundedBitmapDrawableFactory.create(MyProfilFragment.this.getContext().getResources(), resource);
-                    circularBitmapDrawable.setCircular(true);
-                    ivphotoProfil.setImageDrawable(circularBitmapDrawable);
-                }
-            });
+        Glide.with(MyProfilFragment.this.getContext()).using(new FirebaseImageLoader()).load(photoRef).asBitmap().centerCrop()
+                .into(new BitmapImageViewTarget(ivphotoProfil) {
+                    @Override
+                    protected void setResource(Bitmap resource) {
+                        RoundedBitmapDrawable circularBitmapDrawable =
+                                RoundedBitmapDrawableFactory.create(MyProfilFragment.this.getContext().getResources(), resource);
+                        circularBitmapDrawable.setCircular(true);
+                        ivphotoProfil.setImageDrawable(circularBitmapDrawable);
+
+                    }
+                });
 
 
 // Load the image using Glide
-          //        .using(new FirebaseImageLoader())
-            //        .load(photoRef)
-              //      .into(ivphotoProfil);
-
-        } else{
-            Toast.makeText(MyProfilFragment.this.getContext(), "Vous n'avez pas de photo profil", Toast.LENGTH_LONG).show();
-        }
+        //        .using(new FirebaseImageLoader())
+        //        .load(photoRef)
+        //      .into(ivphotoProfil);
+    
 
 
         // Attach a listener to read the data at our profile reference
@@ -121,8 +115,6 @@ public class MyProfilFragment extends Fragment implements ChildEventListener, Vi
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-                Toast.makeText(MyProfilFragment.this.getContext(), "Your Database is fucked up m8 ! ", Toast.LENGTH_LONG)
-                        .show();
             }
         });
 

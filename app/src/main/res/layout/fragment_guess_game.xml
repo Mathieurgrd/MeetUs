@@ -16,38 +16,39 @@
         android:paddingTop="@dimen/activity_vertical_margin"
         tools:context="fr.wcs.meetus.Guess">
 
-        <EditText
+        <TextView
             android:id="@+id/editTextWild"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/editTextAge"
-            android:layout_alignLeft="@+id/tvFragGuess"
-            android:layout_alignStart="@+id/tvFragGuess"
-            android:layout_marginBottom="23dp"
+            android:background="@drawable/barreguess"
+            android:gravity="center_vertical|center"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_above="@+id/editTextAge"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextVille"
             android:layout_width="wrap_content"
+            android:gravity="center_vertical|center"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/editTextWild"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="20dp"
+            android:background="@drawable/barreguess"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            android:layout_above="@+id/editTextWild"
+             />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextAge"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/GuessAnswer"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="23dp"
+            android:gravity="center_vertical|center"
+            android:background="@drawable/barreguess"
             android:ems="10"
-            android:inputType="text|number" />
+            android:inputType="text|number"
+            android:layout_above="@+id/GuessAnswer"
+            />
 
         <EditText
             android:id="@+id/GuessAnswer"
@@ -61,16 +62,16 @@
             android:gravity="center"
             android:inputType="textPersonName" />
 
-        <EditText
+        <TextView
             android:id="@+id/editTextSpé"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/editTextVille"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginBottom="23dp"
+            android:background="@drawable/barreguess"
+            android:gravity="center_vertical|center"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:layout_above="@+id/editTextVille"
+             />
 
         <Button
             android:id="@+id/buttonTry"
@@ -90,25 +91,29 @@
             android:id="@+id/tvFragGuess"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/editTextSpé"
-            android:layout_alignParentTop="true"
-            android:layout_alignStart="@+id/editTextSpé"
-            android:layout_marginTop="16dp"
             android:text="@string/guess"
             android:textSize="20dp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
-        <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
+        <ImageView
             android:id="@+id/PhotoProfil"
-            android:layout_width="96dp"
-            android:layout_height="96dp"
-            android:layout_alignEnd="@+id/editTextVille"
-            android:layout_alignRight="@+id/editTextVille"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:layout_below="@+id/tvFragGuess"
-            android:layout_marginTop="39dp"
-            android:src="@drawable/imgmarineprofil"
-            app:civ_border_color="#FF000000"
-            app:civ_border_width="2dp" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp" />
+
+        <TextView
+            android:id="@+id/textViewAnswer"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_alignEnd="@+id/buttonTry"
+            android:layout_alignTop="@+id/PhotoProfil"
+            android:layout_marginEnd="38dp"
+            android:layout_marginTop="42dp"
+             />
 
     </RelativeLayout>
 
