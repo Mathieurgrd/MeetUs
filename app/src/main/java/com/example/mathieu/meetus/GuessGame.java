@@ -32,6 +32,7 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.Iterator;
 import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 /**
@@ -56,7 +57,6 @@ public class GuessGame extends Fragment {
     private EditText tryField;
     private int tryCount;
     String userIdforPic;
-    public Bitmap bitMap ;
 
 
     //ConstructeurPrivéVide
@@ -68,6 +68,7 @@ public class GuessGame extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_guess_game, container, false);
 
+        tryCount = 0;
 
         pVille = (TextView) v.findViewById(R.id.editTextVille);
         pAge = (TextView) v.findViewById(R.id.editTextAge);
@@ -81,9 +82,9 @@ public class GuessGame extends Fragment {
 
         AnswerName.setEnabled(false);
 
-        new LoadImage().execute(PhotoProfil , bitMap);
+        //new LoadImage().execute(PhotoProfil , bitMap);
 
-      /**  mRef = FirebaseDatabase.getInstance().getReference("Info");
+        mRef = FirebaseDatabase.getInstance().getReference("Info");
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
         mPhotoStorage = FirebaseStorage.getInstance().getReference();
@@ -102,12 +103,17 @@ public class GuessGame extends Fragment {
                 long allNum = dataSnapshot.getChildrenCount();
                 int maxNum = (int) allNum;
                 int min = 1;
-                int randomNum = new Random().nextInt(maxNum - min + 1) + min;
+                //int randomNum = new Random().nextInt(maxNum - min + 1) + min;
+                int randomNum = new Random().nextInt((int) dataSnapshot.getChildrenCount());
 
                 int count = 0;
                 Iterable<DataSnapshot> ds = dataSnapshot.getChildren();
                 Iterator<DataSnapshot> ids = ds.iterator();
 
+                while (ids.hasNext() && count < randomNum) {
+                    ids.next();
+                    count++; // used as positioning.
+                }
                 ProfilModel randomUser = ids.next().getValue(ProfilModel.class);
 
                 pVille.setText(randomUser.getCity());
@@ -116,14 +122,7 @@ public class GuessGame extends Fragment {
                 pAge.setText(String.valueOf(randomUser.getAge()));
                 AnswerName.setText(randomUser.getName().toLowerCase());
 
-                String userIdforPic = randomUser.getUserId();
-
-                // String newPost = (String) ids.next().getValue();
-                while (ids.hasNext() && count < randomNum) {
-                    ids.next();
-                    count++; // used as positioning.
-                }
-
+                userIdforPic = randomUser.getUserId();
 
                 FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                 String userId = user.getUid();
@@ -139,29 +138,19 @@ public class GuessGame extends Fragment {
                         .into(new BitmapImageViewTarget(PhotoProfil) {
                             @Override
                             protected void setResource(Bitmap resource) {
-                                RoundedBitmapDrawable circularBitmapDrawable =
-                                        RoundedBitmapDrawableFactory.create(GuessGame.this.getContext().getResources(), resource);
-                                circularBitmapDrawable.setCircular(true);
-                                PhotoProfil.setImageDrawable(circularBitmapDrawable);
+                                for (int i = 0; i < 20; i++) {
+                                    resource = Blur.blurRenderScript(getContext(), resource, 25);
+                                }
 
-
+                                PhotoProfil.setImageBitmap(resource);
                             }
                         });
-                PhotoProfil.buildDrawingCache();
-                Bitmap bitMap = PhotoProfil.getDrawingCache();
-
-                for (int i = 0; i < 20; i++) {
-                    bitMap = Blur.blurRenderScript(getContext(), bitMap, 25);
-                }
-
-                PhotoProfil.setImageBitmap(bitMap);
             }
-
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
             }
-        }); */
+        });
 
 
         Button Try = (Button) v.findViewById(R.id.buttonTry);
@@ -204,47 +193,32 @@ public class GuessGame extends Fragment {
                             .into(new BitmapImageViewTarget(PhotoProfil) {
                                 @Override
                                 protected void setResource(Bitmap resource) {
-                                    RoundedBitmapDrawable circularBitmapDrawable =
-                                            RoundedBitmapDrawableFactory.create(GuessGame.this.getContext().getResources(), resource);
-                                    circularBitmapDrawable.setCircular(true);
-                                    PhotoProfil.setImageDrawable(circularBitmapDrawable);
+                                    int blurLevel;
 
+                                    switch (tryCount) {
+                                        case 1:
+                                            blurLevel = 15;
+                                            break;
+                                        case  2:
+                                            blurLevel = 8;
+                                            break;
+                                        case 3:
+                                            blurLevel = 2;
+                                            break;
+                                        case 4:
+                                            blurLevel = 0;
+                                            break;
+                                        default:
+                                            blurLevel = 20;
+                                    }
 
+                                    for (int i = 0; i < blurLevel; i++) {
+                                        resource = Blur.blurRenderScript(getContext(), resource, 25);
+                                    }
+
+                                    PhotoProfil.setImageBitmap(resource);
                                 }
                             });
-
-
-                    PhotoProfil.buildDrawingCache();
-                    Bitmap bitMap = PhotoProfil.getDrawingCache();
-                    if (tryCount == 4) {
-                        for (int i = 0; i < 16; i++) {
-                            bitMap = Blur.blurRenderScript(getContext(), bitMap, 25);
-                        }
-                        PhotoProfil.setImageBitmap(bitMap);
-                    } else if (tryCount == 3) {
-                        for (int i = 0; i < 13; i++) {
-                            bitMap = Blur.blurRenderScript(getContext(), bitMap, 25);
-                        }
-                        PhotoProfil.setImageBitmap(bitMap);
-                    } else if (tryCount == 2) {
-                        for (int i = 0; i < 10; i++) {
-                            bitMap = Blur.blurRenderScript(getContext(), bitMap, 25);
-                        }
-                        PhotoProfil.setImageBitmap(bitMap);
-                    } else if (tryCount == 1) {
-                        for (int i = 0; i < 7; i++) {
-                            bitMap = Blur.blurRenderScript(getContext(), bitMap, 25);
-                        }
-                        PhotoProfil.setImageBitmap(bitMap);
-                    } else if (tryCount == 0) {
-                        for (int i = 0; i < 10; i++) {
-                            bitMap = Blur.blurRenderScript(getContext(), bitMap, 25);
-                        }
-                        PhotoProfil.setImageBitmap(bitMap);
-                    }
-
-
-
 
                 String guessStringforDialog = String
                         .format(" Wrong answer ! You have %d characters that match with the name of that profile ! %d try remaining !",
@@ -294,7 +268,7 @@ public class GuessGame extends Fragment {
 
 
 
-    class LoadImage extends AsyncTask<Object, Void, Bitmap> {
+    /*class LoadImage extends AsyncTask<Object, Void, Bitmap> {
 
 
         @Override
@@ -390,7 +364,7 @@ public class GuessGame extends Fragment {
                 PhotoProfil.setVisibility(View.GONE);
             }
         }
-    }
+    }*/
 
 
 
