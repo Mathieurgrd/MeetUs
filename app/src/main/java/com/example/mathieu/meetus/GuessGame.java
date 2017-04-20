@@ -3,6 +3,7 @@ package com.example.mathieu.meetus;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
@@ -29,6 +30,9 @@ import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 
+import java.util.Iterator;
+import java.util.Random;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -51,6 +55,7 @@ public class GuessGame extends Fragment {
     private TextView AnswerName;
     private EditText tryField;
     private int tryCount;
+
 
     //ConstructeurPrivéVide
     public GuessGame() {
@@ -76,28 +81,19 @@ public class GuessGame extends Fragment {
 
 
 
-        mRef = FirebaseDatabase.getInstance().getReference("Info");
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        String userId = user.getUid();
-        mPhotoStorage = FirebaseStorage.getInstance().getReference();
-        StorageReference photoRef = mPhotoStorage.child("userPics/" + userId);
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-        mRef = database.child("users/" + userId);
 
-        PhotoProfil.setImageDrawable(null);
 
-        Glide.with(GuessGame.this.getContext()).using(new FirebaseImageLoader()).load(photoRef).asBitmap().centerCrop().
-                transform(new BlurTransformation(GuessGame.this.getContext()))
-                .into(new BitmapImageViewTarget(PhotoProfil) {
-                    @Override
-                    protected void setResource(Bitmap resource) {
-                        RoundedBitmapDrawable circularBitmapDrawable =
-                                RoundedBitmapDrawableFactory.create(GuessGame.this.getContext().getResources(), resource);
-                        circularBitmapDrawable.setCircular(true);
-                        PhotoProfil.setImageDrawable(circularBitmapDrawable);
 
-                    }
-                });
+        Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.imgmarineprofil);
+        Bitmap blurredImage = bitmap;
+
+        for(int i = 0; i < 20; i++) {
+            blurredImage = Blur.blurRenderScript(getContext(), blurredImage, 25);
+        }
+
+
+
+        PhotoProfil.setImageBitmap(blurredImage);
 
 
         mRef.addValueEventListener(new ValueEventListener() {
@@ -105,16 +101,63 @@ public class GuessGame extends Fragment {
             public void onDataChange(DataSnapshot dataSnapshot) {
 
 
-                ProfilModel userProfile = dataSnapshot.getValue(ProfilModel.class);
+         //       ProfilModel userProfile = dataSnapshot.getValue(ProfilModel.class);
 
-                pVille.setText(userProfile.getCity());
-                pWild.setText(userProfile.getWild());
-                pTechno.setText(userProfile.getTechno());
-                pAge.setText(String.valueOf(userProfile.getAge()));
-                AnswerName.setText(userProfile.getName().toLowerCase());
+                long allNum = dataSnapshot.getChildrenCount();
+                int maxNum = (int)allNum;
+                int min = 0;
+                int randomNum = new Random().nextInt(maxNum - min + 1) + min;
+
+                int count = 0;
+                Iterable<DataSnapshot> ds = dataSnapshot.getChildren();
+                Iterator<DataSnapshot> ids = ds.iterator();
+
+                ProfilModel randomUser = ids.next().getValue(ProfilModel.class);
+
+                pVille.setText(randomUser.getCity());
+                pWild.setText(randomUser.getWild());
+                pTechno.setText(randomUser.getTechno());
+                pAge.setText(String.valueOf(randomUser.getAge()));
+                AnswerName.setText(randomUser.getName().toLowerCase());
+
+                String userIdforPic = randomUser.getUserId();
+
+               // String newPost = (String) ids.next().getValue();
+                while(ids.hasNext() && count < randomNum) {
+                    ids.next();
+                    count ++; // used as positioning.
+                }
+
+
+                mRef = FirebaseDatabase.getInstance().getReference("Info");
+                FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+                String userId = user.getUid();
+                mPhotoStorage = FirebaseStorage.getInstance().getReference();
+                StorageReference photoRef = mPhotoStorage.child("userPics/" + userIdforPic);
+                DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+                mRef = database.child("users");
+
+
+                PhotoProfil.setImageDrawable(null);
+
+                Glide.with(GuessGame.this.getContext()).using(new FirebaseImageLoader()).load(photoRef).asBitmap().centerCrop()
+                        .into(new BitmapImageViewTarget(PhotoProfil) {
+                            @Override
+                            protected void setResource(Bitmap resource) {
+                                RoundedBitmapDrawable circularBitmapDrawable =
+                                        RoundedBitmapDrawableFactory.create(GuessGame.this.getContext().getResources(), resource);
+                                circularBitmapDrawable.setCircular(true);
+                                PhotoProfil.setImageDrawable(circularBitmapDrawable);
+
+                            }
+                        });
+
 
 
             }
+
+
+
 
 
             @Override
@@ -143,12 +186,14 @@ public class GuessGame extends Fragment {
                 else{
 
                     int charCount = 0 ;
+                    Bitmap bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.imgmarineprofil);
+                    Bitmap blurredImage = bitmap;
 
                    for (int i = 0 ; i == AnswerName.length(); i++ ){
 
                        /** (userAnswer.charAt(i) == guessAnswer.charAt(i))*/
-                       if(userAnswer.charAt(i).equals(guessAnswer.charAt(i)))  {
-                           charCount++;
+                       if(userAnswer.charAt(i) == guessAnswer.charAt(i))  {
+                           blurredImage = Blur.blurRenderScript(getContext(), blurredImage, 25);
                        }
 
                    }
@@ -191,6 +236,9 @@ public class GuessGame extends Fragment {
 
 
     }
+
+
+
 
 
 

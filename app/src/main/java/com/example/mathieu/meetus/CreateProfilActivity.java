@@ -29,6 +29,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.OnPausedListener;
 import com.google.firebase.storage.OnProgressListener;
 import com.google.firebase.storage.StorageReference;
@@ -46,17 +47,26 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
     private EditText editTextTechno;
     private EditText editTextWild;
     private EditText editTextVille;
+
     private Toast toast;
+
     private FirebaseDatabase database;
     private DatabaseReference refProfil;
+    private DatabaseReference refCountUser;
+
     private int Toastduration;
+
     private Context context;
+
     private ImageView imageViewProfil;
+
     DatabaseReference mRef;
     String userId;
+
     final static int cameraData = 0;
     Bitmap bmp;
     private StorageReference mPhotoStorage;
+    private StorageReference photoRef;
 
     public final static int RESULT_LOAD_IMAGE = 1;
 
@@ -68,6 +78,9 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_profil);
+
+        photoRef = FirebaseStorage.getInstance().getReference();
+        mPhotoStorage = FirebaseStorage.getInstance().getReference();
 
 
         //Buttons
@@ -84,6 +97,14 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
         context = getApplicationContext();
         Toastduration = Toast.LENGTH_SHORT;
         imageViewProfil = (ImageView) findViewById(R.id.PhotoProfil);
+
+
+
+
+
+
+
+
 
         mAuth = FirebaseAuth.getInstance();
 
@@ -214,6 +235,9 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                 } else {
 
 
+
+
+
                     // Envoi sur la Database
 
                     FirebaseDatabase database = FirebaseDatabase.getInstance();
@@ -222,7 +246,11 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
                     refProfil = database.getReference("users/" + userId);
 
 
-                    ProfilModel userProfile = new ProfilModel(name, age, techno, wild, city, userId);
+
+                    //refCountUser = database.getReference("users/" + "userCount");
+
+
+                    ProfilModel userProfile = new ProfilModel(name, age, techno, wild, city, userId );
                     refProfil.setValue(userProfile);
 
                     startActivity(new Intent(CreateProfilActivity.this, ProfilWelcome.class));
@@ -273,6 +301,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         String userId = user.getUid();
+
 
         StorageReference photoRef = mPhotoStorage.child("userPics/" + userId);
 

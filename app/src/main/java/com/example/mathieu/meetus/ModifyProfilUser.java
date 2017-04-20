@@ -68,6 +68,7 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
     private static final int RESULT_LOAD_IMAGE = 1;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
+    private StorageReference photoRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,6 +92,8 @@ public class ModifyProfilUser extends AppCompatActivity implements View.OnClickL
         imageViewProfil = (ImageView) findViewById(R.id.PhotoProfil);
         mAuth = FirebaseAuth.getInstance();
         mPhotoStorage = FirebaseStorage.getInstance().getReference();
+        photoRef = FirebaseStorage.getInstance().getReference();
+
 
 
         mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {

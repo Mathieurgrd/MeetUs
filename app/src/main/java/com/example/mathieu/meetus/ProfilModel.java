@@ -10,10 +10,13 @@ public class ProfilModel {
     private String wild;
     private String city;
     private String userId;
+    private int userCount;
 
     private ProfilModel(){
 
     }
+
+
 
     public ProfilModel(String name, int age, String techno, String wild, String city, String userId){
         this.name = name;
@@ -22,6 +25,7 @@ public class ProfilModel {
         this.wild = wild;
         this.city = city;
         this.userId = userId;
+        this.userCount = userCount;
 
     }
 
@@ -53,4 +57,6 @@ public class ProfilModel {
 
         return this.city;
     }
+
+
 }
