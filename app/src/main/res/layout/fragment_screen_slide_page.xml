@@ -40,9 +40,10 @@
             android:id="@+id/PhotoProfil"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:layout_below="@+id/polnaref"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp" />
+            android:layout_above="@+id/editTextName"
+            android:layout_alignEnd="@+id/buttonEditProfil"
+            android:layout_marginEnd="42dp"
+            android:layout_marginBottom="22dp" />
 
         <TextView
             android:id="@+id/polnaref"
@@ -109,5 +110,14 @@
             android:layout_below="@+id/polnaref"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/puces"
+            android:layout_below="@+id/editTextVille"
+            android:layout_alignEnd="@+id/PhotoProfil"
+            android:layout_marginTop="34dp" />
 
     </RelativeLayout>

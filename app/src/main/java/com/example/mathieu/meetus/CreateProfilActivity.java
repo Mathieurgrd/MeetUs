@@ -1,5 +1,6 @@
 package com.example.mathieu.meetus;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -49,6 +50,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
     private EditText editTextVille;
 
     private Toast toast;
+    private ProgressDialog progress;
 
     private FirebaseDatabase database;
     private DatabaseReference refProfil;
@@ -93,6 +95,7 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
         editTextWild = (EditText) findViewById(R.id.editTextWild);
         editTextVille = (EditText) findViewById(R.id.editTextVille);
 
+
         toast = Toast.makeText(this, getString(R.string.toastCreateProfil), Toastduration);
         context = getApplicationContext();
         Toastduration = Toast.LENGTH_SHORT;
@@ -110,10 +113,13 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
 
 
         mAuth.addAuthStateListener(new FirebaseAuth.AuthStateListener() {
+
+
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
 
                 FirebaseUser user = firebaseAuth.getCurrentUser();
+
 
                 if (user != null) {
 
@@ -135,9 +141,11 @@ public class CreateProfilActivity extends AppCompatActivity implements View.OnCl
 
                                 if (userId.equals(checkIfUserHasProfile)) {
                                     startActivity(new Intent(CreateProfilActivity.this, ScreenSlideActivity.class));
+
                                     CreateProfilActivity.this.finish();
                                 }
                             } else {
+                                
                                 Toast.makeText(getApplicationContext(), "You don't have a profile", Toast.LENGTH_LONG).show();
                             }
 

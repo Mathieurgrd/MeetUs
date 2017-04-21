@@ -3,11 +3,8 @@ package com.example.mathieu.meetus;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawable;
-import android.support.v4.graphics.drawable.RoundedBitmapDrawableFactory;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -32,7 +29,6 @@ import com.google.firebase.storage.StorageReference;
 
 import java.util.Iterator;
 import java.util.Random;
-import java.util.concurrent.ThreadLocalRandom;
 
 
 /**
@@ -171,9 +167,14 @@ public class GuessGame extends Fragment {
 
                 if (userAnswer.equals(guessAnswer) || tryCount == 4) {
                     Intent maxTry = new Intent(GuessGame.this.getContext(), ScoreResultsActivity.class);
-                    maxTry.putExtra("tryCount", tryCount);
+                   Bundle extra = new Bundle();
+                    extra.putString("answer", guessAnswer);
+                    extra.putInt("tryCount", tryCount);
+                    extra.putString("uid", userIdforPic);
+                    maxTry.putExtras(extra);
                     startActivity(maxTry);
                     getActivity().finish();
+
                 } else {
 
                     int charCount = 0;
@@ -265,120 +266,6 @@ public class GuessGame extends Fragment {
 
 
 }
-
-
-
-    /*class LoadImage extends AsyncTask<Object, Void, Bitmap> {
-
-
-        @Override
-        protected Bitmap doInBackground(Object... params) {
-            mRef = FirebaseDatabase.getInstance().getReference("Info");
-            FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-            String userId = user.getUid();
-            mPhotoStorage = FirebaseStorage.getInstance().getReference();
-
-            DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-            mRef = database.child("users");
-
-
-            mRef.addValueEventListener(new ValueEventListener() {
-                @Override
-                public void onDataChange(DataSnapshot dataSnapshot) {
-
-
-                    //       ProfilModel userProfile = dataSnapshot.getValue(ProfilModel.class);
-
-                    long allNum = dataSnapshot.getChildrenCount();
-                    int maxNum = (int) allNum;
-                    int min = 1;
-                    int randomNum = new Random().nextInt(maxNum - min + 1) + min;
-
-                    int count = 0;
-                    Iterable<DataSnapshot> ds = dataSnapshot.getChildren();
-                    Iterator<DataSnapshot> ids = ds.iterator();
-
-                    ProfilModel randomUser = ids.next().getValue(ProfilModel.class);
-
-                    pVille.setText(randomUser.getCity());
-                    pWild.setText(randomUser.getWild());
-                    pTechno.setText(randomUser.getTechno());
-                    pAge.setText(String.valueOf(randomUser.getAge()));
-                    AnswerName.setText(randomUser.getName().toLowerCase());
-
-                    String userIdforPic = randomUser.getUserId();
-
-                    // String newPost = (String) ids.next().getValue();
-                    while (ids.hasNext() && count < randomNum) {
-                        ids.next();
-                        count++; // used as positioning.
-                    }
-
-
-                    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    String userId = user.getUid();
-                    mPhotoStorage = FirebaseStorage.getInstance().getReference();
-                    StorageReference photoRef = mPhotoStorage.child("userPics/" + userIdforPic);
-                    DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-                    mRef = database.child("users");
-
-
-                    PhotoProfil.setImageDrawable(null);
-
-                    Glide.with(GuessGame.this.getContext()).using(new FirebaseImageLoader()).load(photoRef).asBitmap().centerCrop()
-                            .into(new BitmapImageViewTarget(PhotoProfil) {
-                                @Override
-                                protected void setResource(Bitmap resource) {
-                                    RoundedBitmapDrawable circularBitmapDrawable =
-                                            RoundedBitmapDrawableFactory.create(GuessGame.this.getContext().getResources(), resource);
-                                    circularBitmapDrawable.setCircular(true);
-                                    PhotoProfil.setImageDrawable(circularBitmapDrawable);
-
-
-                                }
-                            });
-                    PhotoProfil.buildDrawingCache();
-                    Bitmap bitMap = PhotoProfil.getDrawingCache();
-
-                    for (int i = 0; i < 20; i++) {
-                        bitMap = Blur.blurRenderScript(getContext(), bitMap, 25);
-                    }
-
-                    PhotoProfil.setImageBitmap(bitMap);
-                }
-
-
-                @Override
-                public void onCancelled(DatabaseError databaseError) {
-                }
-            });
-
-            return bitMap;  }
-
-        @Override
-        protected void onPostExecute(Bitmap bitMap) {
-            if(bitMap!= null && PhotoProfil != null){
-                PhotoProfil.setVisibility(View.VISIBLE);
-                PhotoProfil.setImageBitmap(bitMap);
-            }else{
-                PhotoProfil.setVisibility(View.GONE);
-            }
-        }
-    }*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
