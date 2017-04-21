@@ -3,33 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="/home/mathieu/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.5.2/7446d06ec8d4f7ffcc53f1da37c95f200dcb9387/picasso-2.5.2.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="7446d06ec8d4f7ffcc53f1da37c95f200dcb9387">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/picasso-2.5.2_5a66db8fe0fd2957923cf1a8a6a6e99960dd766a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/.gradle/caches/modules-2/files-2.1/com.github.bumptech.glide/glide/3.7.0/9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4/glide-3.7.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="9e9eeaf9948ee4d6c3ab354e8dc14368f16994a4">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/glide-3.7.0_4093f38e6dbaecfb628ae383669a51c78b9a8f2b/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/mathieu/.android/build-cache/1ccc1bf1f3fe8837f01dc0c05b61fa4c852f06e3/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3c433e48557e476290f45fb6cb568d1a103c9978">
-        <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_dccb1a56ead6a4f19b27f9fdfb795c1fc9df1f9d/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -43,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="a1619030286c92985fbd2145ee6f5c209efd840e">
+        sha1="c68bd504192ec0b6fe77ba7d5aa59836f73beea9">
         <dex dex="/home/mathieu/AndroidStudioProjects/wml/test/MeetUs/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d47edf1a3f1fbd3e3e6bbf00ff796480bdc43244/classes.dex" />
     </item>
 
